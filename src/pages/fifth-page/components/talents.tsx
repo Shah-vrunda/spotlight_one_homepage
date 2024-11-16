@@ -25,17 +25,20 @@ const Talents = ({ handleBack }: TalentsProps) => {
           </div>
 
           <div className="flex flex-col mt-4 md:mt-0 md:flex-row md:flex-grow gap-3 md:w-1/2 justify-between">
-            <div className="flex flex-col gap-3 md:w-[44%] h-full justify-evenly">
+            {/* Column 1 */}
+            <div className="flex flex-col gap-3 md:w-[44%] h-full lg:my-[14%] lg:gap-12">
               <ShowcaseSection
                 title="Get Access to Nationwide Opportunities :"
                 description="Your next role could be just around the corner or anywhere in the country. Spotlight One brings a universe of auditions to your fingertips, making geographical boundaries a thing of the past."
               />
+
               <ShowcaseSection
                 title="Join a Global Casting Ecosystem Join the World’s Elite : "
-                description="By becoming a part of Spotlight One, you’re entering the world’s largest casting software ecosystem. Be where the world is watching.  Be where your Talent can thrive."
+                description="By becoming a part of Spotlight One, you’re entering the world’s largest casting software ecosystem. Be where the world is watching. Be where your Talent can thrive."
               />
             </div>
-            <div className="flex flex-col gap-3 md:w-[44%] h-full justify-evenly">
+
+            <div className="flex flex-col gap-3 md:w-[44%] h-full lg:my-[14%]">
               <ShowcaseSection
                 title="Create your Personal Portfolio : "
                 description="Present your best self with a professional portfolio on Spotlight One. Highlight your Skills, experience, and media in a polished profile that you can share globally with a unique link. Stand out, get noticed."
