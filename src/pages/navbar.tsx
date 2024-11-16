@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-[#51025E] p-4 lg:p-8 font-sans sticky top-0 z-50 shadow-md">
-      <div className="flex w-full lg:w-[50%] justify-between flex-shrink-0 text-white mr-6">
+      <div className="flex w-full lg:w-[35%] justify-between flex-shrink-0 text-white mr-6">
         <div className="flex gap-4 items-center">
           <img src="/spotlight.svg" alt="Spotlight" className="h-4 lg:h-full" />
           <img src="/one.svg" alt="One" className="h-4 lg:h-full" />
@@ -32,11 +32,11 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`w-full lg:flex lg:items-center lg:w-auto ${
+        className={`flex-grow lg:flex lg:items-center lg:w-auto ${
           !isMenuOpen && "hidden"
         }`}
       >
-        <div className="text-sm lg:flex-grow lg:flex lg:gap-7">
+        <div className="text-sm md:text:md md:font-semibold lg:flex-grow lg:flex lg:gap-7 lg:justify-evenly lg:items-center lg:">
           <a
             href="#home"
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4"
@@ -44,19 +44,17 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="#responsive-header"
+            href="#our-solutions"
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4"
           >
             Our Solutions
           </a>
           <a
-            href="#responsive-header"
+            href="#about-us"
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4"
           >
             About Us
           </a>
-        </div>
-        <div>
           <a
             href="https://stg.spotlightone.com/signin"
             target={"_blank"}

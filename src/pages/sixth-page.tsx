@@ -1,6 +1,9 @@
 const SixthPage = () => {
   return (
-    <div className="screen5 w-full py-8 md:py-20 md:px-24 bg-[#51025E] text-[#fffaeb]">
+    <div
+      id="about-us"
+      className="screen5 w-full py-8 md:py-20 md:px-24 bg-[#51025E] text-[#fffaeb]"
+    >
       <div className="flex flex-col gap-20 md:gap-0 md:flex-row items-center">
         <text className=" text-2xl font-bold font-['Work Sans'] md:hidden">
           About Us
