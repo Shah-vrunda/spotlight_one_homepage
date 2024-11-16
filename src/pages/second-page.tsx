@@ -41,9 +41,7 @@ const SecondPage = () => {
       spaceBetween={0}
       speed={300}
       loop={true}
-      autoPlay={{
-        delay: 3000,
-      }}
+      autoplay={true}
     >
       {carouselSlides.map((slide, index) => (
         <SwiperSlide key={index} className="bg-cover bg-center">
