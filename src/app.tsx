@@ -12,8 +12,8 @@ import { Helmet } from "react-helmet";
 const ogData = {
   title: "Spotlight One Home Page",
   description: "Spotlight One Home Page",
-  url: "http://localhost:5173",
-  image: "./spotlight.svg",
+  url: "https://spotlightone.com/",
+  image: "https://cdn.stg.spotlightone.com/images/talentonboarding.png",
   siteName: "Spotlight One",
 };
 
