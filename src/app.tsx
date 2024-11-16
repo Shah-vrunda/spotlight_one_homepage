@@ -7,10 +7,28 @@ import SixthPage from "./pages/sixth-page";
 import ThirdPage from "./pages/third-page";
 import FifthPage from "./pages/fifth-page/fifth-page";
 import Carousel from "./pages/company-carousel";
+import { Helmet } from "react-helmet";
+
+const ogData = {
+  title: "Spotlight One Home Page",
+  description: "Spotlight One Home Page",
+  url: "http://localhost:5173",
+  image: "./spotlight.svg",
+  siteName: "Spotlight One",
+};
 
 export function App() {
   return (
     <>
+      <Helmet>
+        <meta property="og:title" content={ogData.title} />
+        <meta property="og:description" content={ogData.description} />
+        <meta property="og:url" content={ogData.url} />
+        <meta property="og:image" content={ogData.image} />
+        <meta property="og:site_name" content={ogData.siteName} />
+
+        <meta name="description" content={ogData.description} />
+      </Helmet>
       <Navbar />
 
       <FirstPage />
