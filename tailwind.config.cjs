@@ -8,6 +8,10 @@ module.exports = {
         secondary: "",
       },
     },
+    backgroundImage: {
+      "background-pattern": "url('./background.svg')",
+    },
+
     fontFamily: {
       "work-sans": ['"Work Sans"', "sans-serif"],
       "wix-madefor-display": ['"Wix Madefor Display"', "serif"],

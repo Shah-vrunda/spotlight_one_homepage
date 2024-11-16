@@ -19,7 +19,7 @@ const brands = [
 
 const Carousel = () => {
   return (
-    <div className="bg-[url('./background.svg')] bg-cover">
+    <div className="bg-background-pattern bg-cover">
       <div className="flex flex-col p-8">
         <div className="text-white font-[worksans] text-[35px] font-medium leading-normal self-center">
           Our Global Brands

@@ -1,8 +1,7 @@
 import { Autoplay, Pagination } from "swiper/modules";
-export { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "./swipe.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const SecondPage = () => {
   const carouselSlides = [
@@ -41,9 +40,7 @@ const SecondPage = () => {
       spaceBetween={0}
       speed={300}
       loop={true}
-      autoPlay={{
-        delay: 3000,
-      }}
+      autoPlay
     >
       {carouselSlides.map((slide, index) => (
         <SwiperSlide key={index} className="bg-cover bg-center">
