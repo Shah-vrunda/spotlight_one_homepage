@@ -9,7 +9,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      "background-pattern": "url('./background.svg')",
+      "background-pattern": "url('./assets/background.svg')",
     },
 
     fontFamily: {
