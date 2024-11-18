@@ -25,7 +25,7 @@ const FifthPage = () => {
     <>
       <div
         id="our-solution"
-        className="flex flex-col items-center h-screen w-full bg-[#270530] justify-center p-8 md:p-12 lg:p-16"
+        className="flex flex-col items-center h-screen w-full bg-[#270530] justify-evenly pb-8 md:pb-12 lg:pb-16"
       >
         <h1
           className="text-[#FFFAEB] font-bold text-3xl font-work-sans lg:text-5xl leading-normal"
@@ -33,7 +33,7 @@ const FifthPage = () => {
         >
           Why Spotlight One?
         </h1>
-        <div className="flex flex-col gap-6 w-full h-full lg:flex-row  items-center md:justify-center">
+        <div className="flex flex-col gap-6 w-full lg:flex-row  items-center md:justify-center">
           <PhotoCard
             photoName="cd"
             title="For Clients"

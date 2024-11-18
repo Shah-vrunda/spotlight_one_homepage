@@ -14,21 +14,26 @@ const BottomNavigation = () => {
           content="Spotlight One, bottom navigation, spotlight one privacy policy, spotlight one help, spotlight one contact"
         />
       </Helmet>
-      <div className="flex flex-col items-center gap-3">
+      <a
+        className="flex flex-col items-center gap-3  hover:cursor-pointer"
+        href="#home"
+      >
         <img
           src="/spotlight.svg"
           alt="Spotlight One logo"
           className="w-14 md:w-36"
         />
         <img src="/one.svg" alt="Spotlight One logo" className="w-26 md:w-48" />
-      </div>
+      </a>
       <nav className="text-[#fffaeb] text-sm md:text-xl font-normal font-work-sans flex flex-col md:flex-row gap-2 md:gap-10">
-      <a href="https://www.talentsystems.com/" target="_blank">
+        <a href="https://www.talentsystems.com/" target="_blank">
           About Talent Systems
         </a>
-        <a href="/terms">Terms of Use</a>
+        <a href="https://spotlightone.com/privacy-policy">Terms of Use</a>
         <a href="/contact">Contact Us</a>
-        <a href="/privacy">Privacy Policy</a>
+        <a href="https://spotlightone.com/terms-and-conditions">
+          Privacy Policy
+        </a>
         <a href="/help">Help Center</a>
       </nav>
     </footer>

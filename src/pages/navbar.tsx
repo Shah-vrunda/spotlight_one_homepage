@@ -54,7 +54,7 @@ const Navbar = () => {
         />
       </Helmet>
       <div className="flex w-full lg:w-[35%] justify-between flex-shrink-0 text-white mr-6">
-        <div className="flex gap-4 items-center">
+        <a className="flex gap-4 items-center" href="#home">
           <img
             src={navbarFilled ? "/spotlight.svg" : "/primary-logo-purple.svg"}
             alt="Spotlight one logo"
@@ -65,7 +65,7 @@ const Navbar = () => {
             alt="Spotlight one logo"
             className="h-4 lg:h-full"
           />
-        </div>
+        </a>
 
         <div className="block lg:hidden">
           <button

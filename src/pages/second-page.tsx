@@ -101,7 +101,7 @@ const SecondPage = () => {
       }}
       slidesPerView={1}
       spaceBetween={0}
-      speed={300}
+      speed={800}
       loop={true}
     >
       {carouselSlides.map((slide, index) => (
