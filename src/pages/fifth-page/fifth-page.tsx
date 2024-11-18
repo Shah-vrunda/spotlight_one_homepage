@@ -13,7 +13,7 @@ const FifthPage = () => {
   return (
     <>
       <div
-        id="our-solutions"
+        id="our-solution"
         className="flex flex-col items-center h-screen w-full bg-[#270530] justify-center gap-4 p-8 md:gap-8 lg:p-16"
       >
         <h1 className="text-[#FFFAEB] font-bold text-3xl lg:text-5xl leading-normal">

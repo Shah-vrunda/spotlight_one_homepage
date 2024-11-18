@@ -17,9 +17,10 @@ const Talents = ({ handleBack }: TalentsProps) => {
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex flex-col md:flex-row md:space-x-12 md:gap-10">
           <div className="relative md:w-[42%]">
-            <img src="./talent.svg" className="w-full" />
+            <img alt="talent icon" src="./talent.svg" className="w-full" />
             <img
               src="./yellow-circle.svg"
+              alt={"yellow-circle"}
               className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 hidden md:flex"
             />
           </div>
@@ -50,10 +51,12 @@ const Talents = ({ handleBack }: TalentsProps) => {
 
       <img
         src="./purple-circle.svg"
+        alt="purple-circle"
         className="absolute -top-14 -right-3 hidden md:flex"
       />
       <img
         src="./pink-circle.svg"
+        alt="pink-circle"
         className="absolute -bottom-14 -right-3 hidden md:flex"
       />
       <button

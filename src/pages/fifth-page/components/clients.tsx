@@ -11,15 +11,16 @@ const Clients = ({ handleBack }: ClientsProps) => {
       className="flex flex-col w-full overflow-y-auto h-full md:h-screen bg-[#FFFAEB] p-8 md:p-20 gap-10 relative"
       id="clients"
     >
-      <text className="text-2xl lg:text-4xl text-center font-[work-sans] font-bold leading-normal text-[#270530] self-start">
+      <text className="text-2xl lg:text-4xl text-center font-work font-bold leading-normal text-[#270530] self-start">
         For Clients
       </text>
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex flex-col md:flex-row md:space-x-12 md:gap-10">
           <div className="relative md:w-[42%]">
-            <img src="./cd.svg" className="w-full" />
+            <img alt="cd image" src="./cd.svg" className="w-full" />
             <img
               src="./yellow-circle.svg"
+              alt="yellow-circle"
               className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 hidden md:flex"
             />
           </div>
@@ -69,10 +70,12 @@ const Clients = ({ handleBack }: ClientsProps) => {
 
       <img
         src="./purple-circle.svg"
+        alt="purple-circle"
         className="absolute -top-14 -right-3 hidden md:flex"
       />
       <img
         src="./pink-circle.svg"
+        alt="pink-circle"
         className="absolute -bottom-14 -right-3 hidden md:flex"
       />
       <button

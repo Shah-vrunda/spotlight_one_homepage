@@ -26,5 +26,5 @@ module.exports = {
       "slide-down": "slideDown 10s linear infinite",
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated")],
 };
