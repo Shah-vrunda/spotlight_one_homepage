@@ -13,13 +13,11 @@ const Navbar = () => {
       let currentSection = "";
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
+        const sectionTop = (section as HTMLElement).offsetTop;
         if (window.scrollY >= sectionTop - 60) {
           currentSection = section.getAttribute("id") || "";
         }
       });
-
-      console.log("Current Section:", currentSection);
 
       if (
         currentSection === "about-us" ||
@@ -73,7 +71,9 @@ const Navbar = () => {
 
         <div className="block lg:hidden">
           <button
-            className="flex items-center px-3 py-2 border rounded text-white border-transparent hover:border-white"
+            className={`flex items-center px-3 py-2 border rounded ${
+              navbarFilled ? "text-white" : "text-[#51025e]"
+            } border-transparent hover:border-white`}
             onClick={toggleMenu}
           >
             <svg
