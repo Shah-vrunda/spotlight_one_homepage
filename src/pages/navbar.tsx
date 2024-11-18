@@ -7,9 +7,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log("Scrolling...");
       const sections = document.querySelectorAll("div[id]");
-      console.log("Sections:", sections);
       let currentSection = "";
 
       sections.forEach((section) => {
@@ -124,7 +122,7 @@ const Navbar = () => {
               navbarFilled
                 ? "text-[#51025e] bg-[#fffaeb] hover:animate-jump"
                 : "text-[#fffaeb] bg-[#51025e] hover:animate-jump"
-            } h-10 mt-4 lg:mt-0 p-2 rounded-3xl text-nowrap font-medium lg:h-12 lg:p-5 flex justify-center items-center`}
+            } h-10 mt-4 lg:mt-0 p-2 rounded-3xl text-nowrap font-medium lg:h-12 lg:p-5 flex justify-center items-center animate-jump`}
           >
             Login / SignUp
           </a>
