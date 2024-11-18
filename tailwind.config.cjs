@@ -10,8 +10,9 @@ module.exports = {
     },
     backgroundImage: {
       "background-pattern": "url('./assets/background.svg')",
+      "cd-background-pattern": "url('./assets/cd.svg')",
+      "talent-background-pattern": "url('./assets/talent.svg')",
     },
-
     fontFamily: {
       "work-sans": ['"Work Sans"', "sans-serif"],
       "wix-madefor-display": ['"Wix Madefor Display"', "serif"],

@@ -23,7 +23,9 @@ const BottomNavigation = () => {
         <img src="/one.svg" alt="Spotlight One logo" className="w-26 md:w-48" />
       </div>
       <nav className="text-[#fffaeb] text-sm md:text-xl font-normal font-work-sans flex flex-col md:flex-row gap-2 md:gap-10">
-        <a href="/about">About Talent Systems</a>
+      <a href="https://www.talentsystems.com/" target="_blank">
+          About Talent Systems
+        </a>
         <a href="/terms">Terms of Use</a>
         <a href="/contact">Contact Us</a>
         <a href="/privacy">Privacy Policy</a>
