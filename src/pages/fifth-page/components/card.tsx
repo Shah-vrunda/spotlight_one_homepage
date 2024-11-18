@@ -57,14 +57,25 @@ const PhotoCard = ({
 
       {hoverState && deviceType === "lg" && (
         <div
-          className={` ${
+          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-300 ease-in-out animate-fade opacity-80 ${
             photoName === "cd"
               ? "bg-cd-background-pattern"
               : "bg-talent-background-pattern"
-          } bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 relative transition-all duration-300 ease-in-out animate-fade opacity-80`}
+          }`}
           onMouseLeave={() => deviceType === "lg" && setHoverState(false)}
         >
-          <div className="absolute inset-0 bg-gray-900 opacity-40 blur-md w-full h-full backdrop-blur-md"></div>
+          <div className="absolute inset-0 w-full h-full">
+            <div
+              className={`w-full h-full bg-cover bg-center ${
+                photoName === "cd"
+                  ? "bg-cd-background-pattern"
+                  : "bg-talent-background-pattern"
+              } filter blur-md`}
+            ></div>
+          </div>
+
+          <div className="absolute inset-0 bg-gray-900 opacity-40 w-full h-full"></div>
+
           <div className="relative z-10">{hoveredContent}</div>
         </div>
       )}
