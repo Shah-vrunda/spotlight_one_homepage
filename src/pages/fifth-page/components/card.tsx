@@ -76,7 +76,7 @@ const PhotoCard = ({
 
           <div className="absolute inset-0 bg-gray-900 opacity-40 w-full h-full"></div>
 
-          <div className="relative z-10">{hoveredContent}</div>
+          <div className="relative z-10 h-full">{hoveredContent}</div>
         </div>
       )}
     </>
