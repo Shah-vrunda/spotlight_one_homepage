@@ -1,21 +1,4 @@
-// const brands = [
-//   "cast-it-reach",
-//   "cast-it-systems",
-//   "cast-it-talent",
-//   "spotlight-coloured",
-//   "casting-frontier",
-//   "casting-networks",
-//   "staff-me-up",
-//   "tagmin",
-//   "cast-it-reach",
-//   "cast-it-systems",
-//   "cast-it-talent",
-//   "spotlight-coloured",
-//   "casting-frontier",
-//   "casting-networks",
-//   "staff-me-up",
-//   "tagmin",
-// ];
+import { Helmet } from "react-helmet";
 
 const brands = [
   {
@@ -106,7 +89,15 @@ const brands = [
 
 const Carousel = () => {
   return (
-    <div className="bg-background-pattern bg-cover ">
+    <div className="bg-background-pattern bg-cover " id="company-carousel">
+      <Helmet>
+        <title>Spotlight one global brands</title>
+        <meta name="description" content="Spotlight one global brands" />
+        <meta
+          name="keywords"
+          content="spotlight one, spotlight, casting, spotlight india, india casting, largest casting software, largest casting software company, spotlight one global brands"
+        />
+      </Helmet>
       <div className="flex flex-col pt-12 pb-28">
         <div className="text-white font-work-sans text-[35px] font-medium leading-normal self-center pb-10">
           Our Global Brands
