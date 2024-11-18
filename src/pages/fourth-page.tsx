@@ -11,15 +11,27 @@ const FourthPage = () => {
   useIntersectionObserver(
     titleRef,
     "animate-fade-down",
-    "animate-duration-1000"
+    "animate-duration-[4000ms]"
   );
-  useIntersectionObserver(feature1Ref, "animate-jump", "animate-duration-1000");
-  useIntersectionObserver(feature2Ref, "animate-jump", "animate-duration-1000");
-  useIntersectionObserver(feature3Ref, "animate-jump", "animate-duration-1000");
+  useIntersectionObserver(
+    feature1Ref,
+    "animate-jump",
+    "animate-duration-[4000ms]"
+  );
+  useIntersectionObserver(
+    feature2Ref,
+    "animate-jump",
+    "animate-duration-[4000ms]"
+  );
+  useIntersectionObserver(
+    feature3Ref,
+    "animate-jump",
+    "animate-duration-[4000ms]"
+  );
   useIntersectionObserver(
     taglineRef,
     "animate-fade-up",
-    "animate-duration-1000"
+    "animate-duration-[4000ms]"
   );
 
   return (
@@ -32,7 +44,7 @@ const FourthPage = () => {
           <div className="title flex flex-col justify-center gap-2 w-full">
             <text
               ref={titleRef}
-              className="animate-fade-down animate-duration-1000 font-bold text-md md:text-2xl self-center font-work-sans"
+              className="animate-fade-down animate-duration-[4000ms] font-bold text-md md:text-2xl self-center font-work-sans"
             >
               It’s the Casting Director’s Casting Platform
             </text>
@@ -47,7 +59,7 @@ const FourthPage = () => {
           <div className="flex flex-col gap-4 md:gap-12  w-full md:w-1/4">
             <div
               ref={feature1Ref}
-              className="rounded-full animate-jump animate-duration-1000 w-24 h-24 self-center"
+              className="rounded-full animate-jump animate-duration-[4000ms] w-24 h-24 self-center"
             >
               <img
                 src="/search.svg"
@@ -63,7 +75,7 @@ const FourthPage = () => {
           <div className="flex flex-col gap-4 md:gap-12 w-full md:w-1/4">
             <div
               ref={feature2Ref}
-              className="rounded-full w-24 h-24 self-center animate-jump animate-duration-1000"
+              className="rounded-full w-24 h-24 self-center animate-jump animate-duration-[4000ms]"
             >
               <img
                 src="/list.svg"
@@ -78,7 +90,7 @@ const FourthPage = () => {
           <div className="flex flex-col gap-4 md:gap-12  w-full md:w-1/4">
             <div
               ref={feature3Ref}
-              className="rounded-full w-24 h-24 self-center animate-jump animate-duration-1000"
+              className="rounded-full w-24 h-24 self-center animate-jump animate-duration-[4000ms]"
             >
               <img
                 src="/centralize.svg"
@@ -95,7 +107,7 @@ const FourthPage = () => {
         <div className="flex justify-center">
           <text
             ref={taglineRef}
-            className="animate-fade-up animate-duration-1000 text:lg md:text-2xl font-normal font-wix-madefor-display text-center "
+            className="animate-fade-up animate-duration-[4000ms] text:lg md:text-2xl font-normal font-wix-madefor-display text-center "
           >
             Experience casting freedom with Spotlight One, where technology
             meets talent.
