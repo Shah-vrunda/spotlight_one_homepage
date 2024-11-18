@@ -1,22 +1,3 @@
-// const brands = [
-//   "cast-it-reach",
-//   "cast-it-systems",
-//   "cast-it-talent",
-//   "spotlight-coloured",
-//   "casting-frontier",
-//   "casting-networks",
-//   "staff-me-up",
-//   "tagmin",
-//   "cast-it-reach",
-//   "cast-it-systems",
-//   "cast-it-talent",
-//   "spotlight-coloured",
-//   "casting-frontier",
-//   "casting-networks",
-//   "staff-me-up",
-//   "tagmin",
-// ];
-
 const brands = [
   {
     src: "cast-it-reach",

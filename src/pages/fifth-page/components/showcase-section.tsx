@@ -11,10 +11,10 @@ const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({
 }) => {
   return (
     <div className="flex flex-col">
-      <p className="font-semibold text-base leading-normal text-[#270530] font-[work-sans]">
+      <p className="font-semibold text-base leading-normal text-[#270530] font-work-sans">
         {title}
       </p>
-      <p className="text-base leading-normal text-[#270530] font-[work-sans] text-justify">
+      <p className="text-base leading-normal text-[#270530] font-work-sans text-justify">
         {description}
       </p>
     </div>

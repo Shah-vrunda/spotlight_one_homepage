@@ -8,10 +8,10 @@ interface TalentsProps {
 const Talents = ({ handleBack }: TalentsProps) => {
   return (
     <div
-      className="flex flex-col w-full overflow-y-auto h-full md:h-screen bg-[#FFFAEB] p-8 md:p-20 gap-10 relative"
+      className="flex flex-col w-full overflow-x-hidden overflow-y-auto h-full md:h-screen bg-[#FFFAEB] p-8 md:p-20 gap-10 relative"
       id="talents"
     >
-      <text className="text-2xl lg:text-4xl text-center font-[work-sans] font-bold leading-normal text-[#270530] self-start">
+      <text className="text-2xl lg:text-4xl text-center font-work-sans font-bold leading-normal text-[#270530] self-start">
         For Talents
       </text>
       <div className="flex flex-col md:flex-row items-center">
