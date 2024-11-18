@@ -19,6 +19,7 @@ const Clients = ({ handleBack }: ClientsProps) => {
             <img src="./cd.svg" className="w-full" />
             <img
               src="./yellow-circle.svg"
+              alt="yellow-circle"
               className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 hidden md:flex"
             />
           </div>

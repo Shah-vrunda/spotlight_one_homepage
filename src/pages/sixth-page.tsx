@@ -1,22 +1,74 @@
+import { useRef } from "react";
+import useIntersectionObserver from "./reusableHooks";
+import { Helmet } from "react-helmet";
+
 const SixthPage = () => {
+  const imageRef = useRef(null);
+  const headingRef = useRef(null);
+  const textRef = useRef(null);
+
+  useIntersectionObserver(
+    imageRef,
+    "animate-fade",
+    "animate-duration-[2000ms]"
+  );
+  useIntersectionObserver(
+    headingRef,
+    "animate-fade-left",
+    "animate-duration-[1000ms]"
+  );
+  useIntersectionObserver(
+    textRef,
+    "animate-fade-left",
+    "animate-delay-[500ms]"
+  );
+
   return (
     <div
       id="about-us"
       className="screen5 w-full py-8 md:py-20 md:px-24 bg-[#51025E] text-[#fffaeb]"
     >
-      <div className="flex flex-col gap-8 md:gap-0 md:flex-row items-center">
-        <text className=" text-2xl font-bold font-['Work Sans'] md:hidden">
+      <Helmet>
+        <title>Spotlight One About Us</title>
+        <meta
+          name="description"
+          content="Spotlight One is a subsidiary of Talent Systems LLC, the leading technology solution provider for casting and auditioning to the entertainment industry globally."
+        />
+        <meta
+          name="keywords"
+          content="about spotlight one, spotlight one about, spotlight one information, spotlight one details, spotlight one overview, spotlight one company, spotlight one mission, spotlight one vision, spotlight one team, spotlight one history, spotlight one background, spotlight one services, spotlight one platform, spotlight one casting, spotlight one talent, spotlight one entertainment, spotlight one film industry, spotlight one casting directors, spotlight one performers"
+        />
+      </Helmet>
+      <div className="flex flex-col gap-20 md:gap-4 md:flex-row items-center">
+        <text
+          ref={headingRef}
+          className=" text-2xl font-bold font-work-sans md:hidden animate-duration-[1000ms]"
+        >
           About Us
         </text>
-        <div className="flex justify-center w-[80%] md:w-[50%]">
-          <img src="/about.svg" className="object-contain" />
+
+        <div
+          ref={imageRef}
+          className="flex justify-center w-[80%] md:w-[50%] animate-fade animate-duration-[2000ms]"
+        >
+          <img
+            src="/about.svg"
+            alt="about us image"
+            className="object-contain"
+          />
         </div>
         <div className="w-[80%] md:w-[50%]">
-          <div className="flex flex-col gap-20 lg:w-[400px] xl:w-[613px] justify-center">
-            <text className=" text-5xl font-bold font-['Work Sans'] hidden md:inline-block">
+          <div className="flex flex-col xl:gap-20 lg:gap-8 md:gap-5 justify-center h-full">
+            <text
+              ref={headingRef}
+              className="text-5xl animate-fade-left animate-duration-[1000ms] font-bold font-work-sans hidden md:inline-block"
+            >
               About Us
             </text>
-            <text className="font-medium text-base leading-7 font-['Wix Madefor Display'] text-justify">
+            <text
+              ref={textRef}
+              className="font-medium animate-fade-left animate-delay-[500ms] text-base leading-7 font-wix-madefor-display text-justify"
+            >
               Spotlight One is a subsidiary of Talent Systems LLC, the leading
               technology solution provider for casting and auditioning to the
               entertainment industry globally. Casting Directors, agents and

@@ -1,18 +1,74 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [navbarFilled, SetNavbarFilled] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log("Scrolling...");
+      const sections = document.querySelectorAll("div[id]");
+      console.log("Sections:", sections);
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 60) {
+          currentSection = section.getAttribute("id") || "";
+        }
+      });
+
+      console.log("Current Section:", currentSection);
+
+      if (
+        currentSection === "about-us" ||
+        currentSection === "our-solution" ||
+        currentSection === "our-features" ||
+        currentSection === "footer" ||
+        currentSection === "company-carousel"
+      ) {
+        SetNavbarFilled(false);
+      } else {
+        SetNavbarFilled(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-[#51025E] p-4 lg:p-8 font-sans sticky top-0 z-50 shadow-md">
+    <nav
+      className="flex items-center justify-between flex-wrap p-4 lg:p-8 font-work-sans sticky top-0 z-50 shadow-md"
+      style={{ backgroundColor: navbarFilled ? "#51025e" : "#fffaeb" }}
+    >
+      <Helmet>
+        <title>Spotlight One - Navbar</title>
+        <meta name="description" content="Spotlight One navigation bar" />
+        <meta
+          name="keywords"
+          content="Spotlight One, navigation bar, spotlight one home, spotlight one solution, spotlight one about us, , spotlight one signup ,  spotlight one login/signup, spotlight one login page, spotlight one signup page"
+        />
+      </Helmet>
       <div className="flex w-full lg:w-[35%] justify-between flex-shrink-0 text-white mr-6">
         <div className="flex gap-4 items-center">
-          <img src="/spotlight.svg" alt="Spotlight" className="h-4 lg:h-full" />
-          <img src="/one.svg" alt="One" className="h-4 lg:h-full" />
+          <img
+            src={navbarFilled ? "/spotlight.svg" : "/primary-logo-purple.svg"}
+            alt="Spotlight one logo"
+            className="h-4 lg:h-full"
+          />
+          <img
+            src={navbarFilled ? "/one.svg" : "/secondary-logo-purple.svg"}
+            alt="Spotlight one logo"
+            className="h-4 lg:h-full"
+          />
         </div>
 
         <div className="block lg:hidden">
@@ -36,29 +92,39 @@ const Navbar = () => {
           !isMenuOpen && "hidden"
         }`}
       >
-        <div className="text-sm md:text:md md:font-semibold lg:flex-grow lg:flex lg:gap-7 lg:justify-evenly lg:items-center lg:">
+        <div
+          className={`${
+            navbarFilled
+              ? "text-[#fffaeb] hover:text-gray-200"
+              : "text-[#51025e] "
+          } text-[22px] md:text:md font-medium lg:flex-grow  lg:flex lg:gap-7 lg:justify-evenly lg:items-center lg:`}
+        >
           <a
             href="#home"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4"
+            className="block hover:animate-jump mt-4 lg:inline-block lg:mt-0  mr-4"
           >
             Home
           </a>
           <a
-            href="#our-solutions"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4"
+            href="#our-solution"
+            className="block mt-4 hover:animate-jump lg:inline-block lg:mt-0  mr-4"
           >
-            Our Solutions
+            Our Solution
           </a>
           <a
             href="#about-us"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-200 mr-4"
+            className="block mt-4 hover:animate-jump lg:inline-block lg:mt-0  mr-4"
           >
             About Us
           </a>
           <a
             href="https://stg.spotlightone.com/signin"
             target={"_blank"}
-            className="h-10 mt-4 lg:mt-0 p-2 rounded-3xl text-nowrap font-medium text-[#51025e] bg-[#fffaeb] lg:h-12 lg:p-5 flex justify-center items-center"
+            className={`${
+              navbarFilled
+                ? "text-[#51025e] bg-[#fffaeb] hover:animate-jump"
+                : "text-[#fffaeb] bg-[#51025e] hover:animate-jump"
+            } h-10 mt-4 lg:mt-0 p-2 rounded-3xl text-nowrap font-medium lg:h-12 lg:p-5 flex justify-center items-center`}
           >
             Login / SignUp
           </a>
