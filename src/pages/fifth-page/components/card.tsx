@@ -57,7 +57,7 @@ const PhotoCard = ({
 
       {hoverState && deviceType === "lg" && (
         <div
-          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-300 ease-in-out animate-fade opacity-80 ${
+          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-300 ease-in-out opacity-80 animate-fade-right ${
             photoName === "cd"
               ? "bg-cd-background-pattern"
               : "bg-talent-background-pattern"
