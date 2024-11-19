@@ -21,7 +21,12 @@ const TalentsContent = () => {
         />
 
         <ShowcaseSection
-          title="Join a Global Casting Ecosystem Join the World’s Elite : "
+          title={
+            <h2>
+              Join a Global Casting Ecosystem <br />
+              Join the World’s Elite :{" "}
+            </h2>
+          }
           description="By becoming a part of Spotlight One, you’re entering the world’s largest casting software ecosystem. Be where the world is watching. Be where your Talent can thrive."
         />
       </div>
