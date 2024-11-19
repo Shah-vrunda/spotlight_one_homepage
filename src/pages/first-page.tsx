@@ -31,7 +31,7 @@ const FirstPage = () => {
       className="screen1 flex lg:flex-row flex-col-reverse w-full text-[#fffaeb] justify-center bg-[#040301] items-center"
     >
       <Helmet>
-        <title>Spotlight One home page</title>
+        <title>Spotlight One - Home Page</title>
         <meta name="description" content="spoltight-one home page" />
         <meta
           name="keywords"
@@ -41,25 +41,25 @@ const FirstPage = () => {
       <div className="lg:flex justify-center lg:w-1/2 h-full">
         <div className=" flex flex-col justify-center gap-11 lg:items-start items-center p-3 mb-3 lg:p-0 lg:mb-0">
           <h1
-            ref={headingRef} // Attach the ref to the heading element
+            ref={headingRef}
             className="text-3xl md:text-4xl lg:text-[50px] font-bold font-work-sans "
           >
             Spotlight is now in India
           </h1>
-          <p
-            ref={paragraphRef} // Attach the ref to the paragraph element
+          <h2
+            ref={paragraphRef}
             className="text-sm md:text-lg lg:text-[22px] font-wix-madefor-display font-normal  flex flex-col gap-1 lg:gap-2"
           >
             <span>Spotlight - The home of casting is now in India.</span>
             <span>It has been a long time coming: the largest casting</span>
             <span>software company in the world meeting the largest</span>
             <span>film and entertainment industry in the world.</span>
-          </p>
+          </h2>
         </div>
       </div>
       <div className="flex justify-center">
         <img
-          ref={imageRef} // Attach the ref to the image element
+          ref={imageRef}
           src="/1st-screen.svg"
           alt="1st screen image"
           className="w-full h-[80%] md:h-[50%] lg:h-screen object"

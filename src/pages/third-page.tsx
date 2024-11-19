@@ -29,7 +29,7 @@ const ThirdPage = () => {
   return (
     <div className="screen3 flex w-full bg-[#fffaeb] relative p-10 md:p-0">
       <Helmet>
-        <title>Spotlight One made in India</title>
+        <title>Spotlight One - Made In India</title>
         <meta
           name="description"
           content="Spotlight One made in India, made for India"
@@ -37,21 +37,21 @@ const ThirdPage = () => {
       </Helmet>
       <div className="w-full flex flex-col md:flex-row justify-between md:pt-16 md:pb-36 md:px-40 z-10 relative">
         <div className=" flex flex-col md:w-[60%] gap-8 md:gap-14 text-[#270530] justify-center">
-          <h3
+          <h1
             ref={headingRef}
             className="flex flex-col gap-2 font-work-sans text-4xl animate-fade-right animate-duration-[500ms] md:text-5xl font-bold"
           >
             <text>Made in India,</text>
             <text>Made for India</text>
-          </h3>
-          <text
+          </h1>
+          <h2
             ref={textRef}
             className="flex flex-col text-md md:text-[26px] font-normal font-wix-madefor-display animate-fade-right animate-delay-[180ms]"
           >
             <span>Spotlight One has been developed in </span>
             <span>consultation with the country’s foremost</span>
             <span>casting directors and studio executives. </span>
-          </text>
+          </h2>
         </div>
         <div
           ref={imageRef}
