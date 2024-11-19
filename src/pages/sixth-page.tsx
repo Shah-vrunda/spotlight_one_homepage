@@ -26,7 +26,7 @@ const SixthPage = () => {
   return (
     <div
       id="about-us"
-      className="screen5 w-full py-8 md:py-20 max-h-lvh md:px-24 bg-[#51025E] text-[#fffaeb]"
+      className="screen5 w-full py-8 md:py-20 md:px-24 bg-[#51025E] text-[#fffaeb]"
     >
       <Helmet>
         <title>Spotlight One About Us</title>
