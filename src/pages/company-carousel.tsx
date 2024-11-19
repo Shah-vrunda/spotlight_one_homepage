@@ -140,7 +140,7 @@ const Carousel = () => {
         </div>
 
         <div className="flex overflow-hidden items-center justify-center relative h-36 slider">
-          <div className="flex justify-center gap-24 slide-track">
+          <div className="flex justify-center gap-4 md:gap-24 slide-track">
             {brands.map((brand, index) => (
               <img
                 key={index}
