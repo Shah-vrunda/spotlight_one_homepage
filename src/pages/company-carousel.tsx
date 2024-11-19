@@ -4,86 +4,82 @@ const brands = [
   {
     src: "cast-it-reach",
     alt: "cast-it-reach",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
   {
     src: "cast-it-systems",
     alt: "cast-it-systems",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
   {
     src: "cast-it-talent",
     alt: "cast-it-talent",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
   {
     src: "casting-networks",
     alt: "casting-networks",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
-
   {
     src: "spotlight-coloured",
     alt: "spotlight-coloured",
-    className: "carousel-image min-w-[600px]",
+    className: "carousel-image",
   },
   {
     src: "tagmin",
     alt: "tagmin",
-    className: "carousel-image min-w-[100px]",
+    className: "carousel-image",
   },
   {
     src: "casting-frontier",
     alt: "casting-frontier",
-    className: "carousel-image min-w-[250px]",
+    className: "carousel-image",
   },
-
   {
     src: "staff-me-up",
     alt: "staff-me-up",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
-
   {
     src: "cast-it-reach",
     alt: "cast-it-reach",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
   {
     src: "cast-it-systems",
     alt: "cast-it-systems",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
   {
     src: "cast-it-talent",
     alt: "cast-it-talent",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
   {
     src: "casting-networks",
     alt: "casting-networks",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
   {
     src: "spotlight-coloured",
     alt: "spotlight-coloured",
-    className: "carousel-image min-w-[600px]",
+    className: "carousel-image",
   },
   {
     src: "tagmin",
     alt: "tagmin",
-    className: "carousel-image min-w-[100px]",
+    className: "carousel-image",
   },
   {
     src: "casting-frontier",
     alt: "casting-frontier",
-    className: "carousel-image min-w-[250px]",
+    className: "carousel-image",
   },
-
   {
     src: "staff-me-up",
     alt: "staff-me-up",
-    className: "carousel-image min-w-[150px]",
+    className: "carousel-image",
   },
 ];
 
@@ -103,12 +99,12 @@ const Carousel = () => {
           Our Global Brands
         </div>
 
-        <div className="flex overflow-hidden items-center justify-around relative h-36">
-          <div className="flex animate-slide">
+        <div className="flex overflow-hidden items-center justify-center relative h-36">
+          <div className="flex animate-slide justify-center">
             {brands.map((brand, index) => (
               <img
                 key={index}
-                className={`${brand.className} min-w-[200px] object-contain transform scale-75 mx-7`}
+                className={`${brand.className}  object-contain transform mx-7`}
                 src={`./${brand.src}.svg`}
                 alt="logo"
               />
