@@ -26,7 +26,7 @@ html {
 
 .animate-slide {
   animation: slide 20s linear infinite;
-  /* -webkit-animation: slide 20s linear infinite; */
+  -webkit-animation: slide 20s linear infinite;
   display: flex;
   will-change: transform;
   animation-delay: -10s;

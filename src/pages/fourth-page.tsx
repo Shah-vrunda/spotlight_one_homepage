@@ -67,7 +67,7 @@ const FourthPage = () => {
                 className="rounded-full object-cover"
               />
             </div>
-            <text className="text-center">
+            <text className="text-center text:lg md:text-2xl">
               Broadcast targeted casting calls, reaching untapped talent
               nationwide
             </text>
@@ -83,7 +83,7 @@ const FourthPage = () => {
                 className="rounded-full object-cover"
               />
             </div>
-            <text className="text-center">
+            <text className="text-center text:lg md:text-2xl">
               Use intelligent filters for quick, precise role matching
             </text>
           </div>
@@ -98,7 +98,7 @@ const FourthPage = () => {
                 className="rounded-full object-cover"
               />
             </div>
-            <text className="text-center">
+            <text className="text-center text:lg md:text-2xl">
               Centralize your data and simplify collaboration with automation
               and support
             </text>

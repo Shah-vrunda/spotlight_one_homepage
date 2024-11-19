@@ -22,6 +22,8 @@ const PhotoCard = ({
   const [hoverState, setHoverState] = useState(false);
   const deviceType = useDeviceType();
 
+  console.log(deviceType);
+
   const divRef = useRef(null);
   useIntersectionObserver(
     divRef,
@@ -34,20 +36,17 @@ const PhotoCard = ({
       {!hoverState && (
         <div
           ref={divRef}
-          className="flex flex-col bg-[#FFFAEB] overflow-hidden transition-all duration-300 ease-in-out  md:h-[50vh] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms]"
+          className="flex flex-col bg-[#FFFAEB] overflow-hidden transition-all duration-300 ease-in-out  md:h-[50%] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms]"
           onMouseEnter={() => deviceType === "lg" && setHoverState(true)}
         >
-          <div
-            className="w-full relative h-[75%]"
-            style={{ paddingBottom: "48.25%" }}
-          >
+          <div className="w-full relative h-[75%] pb-[33%]">
             <img
               src={`./${photoName}.svg`}
               alt={`${photoName}-pic`}
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
           </div>
-          <div className="p-2 md:p-4 pb-0">
+          <div className="p-1 md:p-2 pb-0 flex-grow flex flex-col justify-center">
             <h2 className="text-[#270530] textmd  md:text-xl lg:text-2xl font-medium">
               {title}
             </h2>
