@@ -60,7 +60,7 @@ const FirstPage = () => {
       <div className="flex justify-center">
         <img
           ref={imageRef}
-          src="/1st-screen.svg"
+          src="1st-screen.svg"
           alt="1st screen image"
           className="w-full h-[80%] md:h-[50%] lg:h-screen object"
         />

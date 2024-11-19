@@ -16,9 +16,9 @@ const Clients = ({ handleBack }: ClientsProps) => {
       <div className="flex flex-col lg:flex-row items-center">
         <div className="flex flex-col lg:flex-row lg:space-x-12 md:gap-10">
           <div className="relative lg:w-[42%] ">
-            <img src="./cd.svg" className="w-full" />
+            <img src="cd.svg" className="w-full" />
             <img
-              src="./yellow-circle.svg"
+              src="yellow-circle.svg"
               alt="yellow-circle"
               className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 hidden md:flex"
             />
@@ -84,11 +84,11 @@ const Clients = ({ handleBack }: ClientsProps) => {
       </div>
 
       <img
-        src="./purple-circle.svg"
+        src="purple-circle.svg"
         className="absolute -top-14 -right-3 hidden lg:flex"
       />
       <img
-        src="./pink-circle.svg"
+        src="pink-circle.svg"
         className="absolute -bottom-14 -right-3 hidden lg:flex"
       />
       <button

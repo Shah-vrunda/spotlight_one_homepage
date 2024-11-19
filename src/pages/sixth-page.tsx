@@ -52,7 +52,7 @@ const SixthPage = () => {
           className="  md:animate-fade-right animate-duration-[1000ms]"
         >
           <img
-            src="/about.svg"
+            src="about.svg"
             alt="about us image"
             className="object-contain"
           />

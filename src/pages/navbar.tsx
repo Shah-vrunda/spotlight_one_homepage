@@ -56,12 +56,12 @@ const Navbar = () => {
       <div className="flex w-full lg:w-[35%] justify-between flex-shrink-0 text-white mr-6">
         <a className="flex gap-4 items-center active:" href="#home">
           <img
-            src={navbarFilled ? "/spotlight.svg" : "/primary-logo-purple.svg"}
+            src={navbarFilled ? "spotlight.svg" : "primary-logo-purple.svg"}
             alt="Spotlight one logo"
             className="h-4 lg:h-full"
           />
           <img
-            src={navbarFilled ? "/one.svg" : "/secondary-logo-purple.svg"}
+            src={navbarFilled ? "one.svg" : "secondary-logo-purple.svg"}
             alt="Spotlight one logo"
             className="h-4 lg:h-full"
           />

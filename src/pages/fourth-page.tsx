@@ -71,7 +71,7 @@ const FourthPage = () => {
                 className="rounded-full animate-jump animate-duration-[500ms] w-24 h-24 self-center"
               >
                 <img
-                  src="/search.svg"
+                  src="search.svg"
                   alt="search icon"
                   className="rounded-full object-cover"
                 />
@@ -87,7 +87,7 @@ const FourthPage = () => {
                 className="rounded-full w-24 h-24 self-center animate-jump animate-duration-[500ms]"
               >
                 <img
-                  src="/list.svg"
+                  src="list.svg"
                   alt="list icon"
                   className="rounded-full object-cover"
                 />
@@ -102,7 +102,7 @@ const FourthPage = () => {
                 className="rounded-full w-24 h-24 self-center animate-jump animate-duration-[500ms]"
               >
                 <img
-                  src="/centralize.svg"
+                  src="centralize.svg"
                   alt="centralize icon"
                   className="rounded-full object-cover"
                 />

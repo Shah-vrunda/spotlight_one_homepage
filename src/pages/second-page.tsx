@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 const SecondPage = () => {
   const carouselSlides = [
     {
-      image: "/carousel1.svg",
+      image: "carousel1.svg",
       heading: "Access",
       subHeading:
         "One platform for talented performers to access viable opportunities and genuine casting directors in the Indian film and entertainment industry.",
@@ -17,7 +17,7 @@ const SecondPage = () => {
         "right-0 animate-fade-left animate-duration-[2000ms]",
     },
     {
-      image: "/carousel2.png",
+      image: "carousel2.png",
       heading: "Inclusion",
       subHeading:
         "One platform to promote talented performers, irrespective of caste, religion, gender, geography or social status",
@@ -26,7 +26,7 @@ const SecondPage = () => {
     },
 
     {
-      image: "/carousel3.png",
+      image: "carousel3.png",
       heading: "Expression",
       subHeading:
         "One platform to unearth and nurture the performer's unique talents, with the help of India’s foremost casting directors.",
@@ -164,38 +164,38 @@ const SecondPage = () => {
             </div>
             {/* Circles */}
             <img
-              src="/top-left-circle.svg"
+              src="top-left-circle.svg"
               alt="top-left-circle"
               ref={topLeftCircleRef}
               className="absolute top-0 left-0 hidden lg:flex animate-delay-[300ms] animate-fade-down"
             />
             <img
-              src="/top-right-circle.svg"
+              src="top-right-circle.svg"
               alt="top-right-circle"
               ref={topRightCircleRef}
               className="absolute top-0 right-0 hidden lg:flex animate-delay-[300ms] animate-fade-down"
             />
             <img
               ref={bottomRightCircleRef}
-              src="/bottom-right-circle.svg"
+              src="bottom-right-circle.svg"
               alt="bottom-right-circle"
               className="absolute right-0 bottom-0 hidden lg:flex animate-delay-[300ms] animate-fade-up"
             />
             <img
               ref={bottomLeftCircleRef}
-              src="/bottom-left-circle.svg"
+              src="bottom-left-circle.svg"
               alt="bottom-left-circle"
               className="absolute left-12 bottom-0 hidden lg:flex animate-delay-[300ms] animate-fade-up"
             />
             <img
               ref={bottomCenterCircleRef}
-              src="/bottom-center-circle.svg"
+              src="bottom-center-circle.svg"
               alt="bottom-center-circle"
               className="absolute bottom-0 inset-x-2/3 hidden lg:flex animate-delay-[300ms] animate-fade-up"
             />
             <img
               ref={topCenterCircleRef}
-              src="/top-center-circle.svg"
+              src="top-center-circle.svg"
               alt="top-center-circle"
               className="absolute top-0 inset-x-2/4 mx-auto hidden lg:flex animate-delay-[300ms] animate-fade-down"
             />

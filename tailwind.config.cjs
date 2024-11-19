@@ -23,9 +23,9 @@ module.exports = {
       },
     },
     backgroundImage: {
-      "background-pattern": "url('./assets/background.svg')",
-      "cd-background-pattern": "url('./assets/cd.svg')",
-      "talent-background-pattern": "url('./assets/talent.svg')",
+      "background-pattern": "url('background.svg')",
+      "cd-background-pattern": "url('cd.svg')",
+      "talent-background-pattern": "url('talent.svg')",
     },
     fontFamily: {
       "work-sans": ['"Work Sans"', "sans-serif"],

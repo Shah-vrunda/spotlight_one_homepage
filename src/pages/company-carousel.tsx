@@ -145,7 +145,7 @@ const Carousel = () => {
               <img
                 key={index}
                 className={`${brand.className}  object-contain transform mx-7`}
-                src={`./${brand.src}.svg`}
+                src={`${brand.src}.svg`}
                 alt="logo"
               />
             ))}

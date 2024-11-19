@@ -19,11 +19,11 @@ const BottomNavigation = () => {
         href="#home"
       >
         <img
-          src="/spotlight.svg"
+          src="spotlight.svg"
           alt="Spotlight One logo"
           className="w-14 md:w-36"
         />
-        <img src="/one.svg" alt="Spotlight One logo" className="w-26 md:w-48" />
+        <img src="one.svg" alt="Spotlight One logo" className="w-26 md:w-48" />
       </a>
       <nav className="text-[#fffaeb] text-sm md:text-xl font-normal font-work-sans flex flex-col md:flex-row gap-2 md:gap-10">
         <a href="https://www.talentsystems.com/" target="_blank">
