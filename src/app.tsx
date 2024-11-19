@@ -51,6 +51,38 @@ export function App() {
             }
           `}
         </script>
+        <link rel="preload" href="./1st-screen.svg" as="image" />
+        <link rel="preload" href="./3rd-screen.svg" as="image" />
+        <link rel="preload" href="./about.svg" as="image" />
+        <link rel="preload" href="./bottom-center-circle.svg" as="image" />
+        <link rel="preload" href="./bottom-left-circle.svg" as="image" />
+        <link rel="preload" href="./bottom-right-circle.svg" as="image" />
+        <link rel="preload" href="./carousel1.svg" as="image" />
+        <link rel="preload" href="./carousel2.png" as="image" />
+        <link rel="preload" href="./carousel3.png" as="image" />
+        <link rel="preload" href="./cast-it-reach.svg" as="image" />
+        <link rel="preload" href="./cast-it-systems.svg" as="image" />
+        <link rel="preload" href="./cast-it-talent.svg" as="image" />
+        <link rel="preload" href="./casting-frontier.svg" as="image" />
+        <link rel="preload" href="./casting-networks.svg" as="image" />
+        <link rel="preload" href="./cd.svg" as="image" />
+        <link rel="preload" href="./centralize.svg" as="image" />
+        <link rel="preload" href="./list.svg" as="image" />
+        <link rel="preload" href="./one.svg" as="image" />
+        <link rel="preload" href="./pink-circle.svg" as="image" />
+        <link rel="preload" href="./primary-logo-purple.svg" as="image" />
+        <link rel="preload" href="./purple-circle.svg" as="image" />
+        <link rel="preload" href="./search.svg" as="image" />
+        <link rel="preload" href="./secondary-logo-purple.svg" as="image" />
+        <link rel="preload" href="./spotlight-coloured.svg" as="image" />
+        <link rel="preload" href="./spoytlight.svg" as="image" />
+        <link rel="preload" href="./staff-me-up.svg" as="image" />
+        <link rel="preload" href="./tagmin.svg" as="image" />
+        <link rel="preload" href="./talent.svg" as="image" />
+        <link rel="preload" href="./top-center-circle.svg" as="image" />
+        <link rel="preload" href="./top-left-circle.svg" as="image" />
+        <link rel="preload" href="./top-right-circle.svg" as="image" />
+        <link rel="preload" href="./yello-circle.svg" as="image" />
       </Helmet>
       <Navbar />
 
