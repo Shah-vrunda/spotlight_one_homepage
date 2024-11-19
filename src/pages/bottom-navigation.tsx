@@ -29,13 +29,13 @@ const BottomNavigation = () => {
         <a href="https://www.talentsystems.com/" target="_blank">
           About Talent Systems
         </a>
-        <a target={"_blank"} href="https://spotlightone.com/privacy-policy">
+        <a target={"_blank"} href="https://app.spotlightone.com/privacy-policy">
           Terms of Use
         </a>
         <a href="/contact">Contact Us</a>
         <a
           target={"_blank"}
-          href="https://spotlightone.com/terms-and-conditions"
+          href="https://app.spotlightone.com/terms-and-conditions"
         >
           Privacy Policy
         </a>

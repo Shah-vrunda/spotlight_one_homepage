@@ -116,8 +116,7 @@ const Navbar = () => {
             About Us
           </a>
           <a
-            href="https://spotlightone.com/signin"
-            target={"_blank"}
+            href="https://app.spotlightone.com/signin"
             className={`${
               navbarFilled
                 ? "text-[#51025e] bg-[#fffaeb] hover:animate-jump"
