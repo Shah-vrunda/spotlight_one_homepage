@@ -99,8 +99,8 @@ const FourthPage = () => {
               />
             </div>
             <text className="text-center">
-              Broadcast targeted casting calls, reaching untapped talent
-              nationwide
+              Centralize your data and simplify collaboration with automation
+              and support
             </text>
           </div>
         </div>
