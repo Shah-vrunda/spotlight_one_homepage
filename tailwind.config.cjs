@@ -7,6 +7,20 @@ module.exports = {
         primary: "",
         secondary: "",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        scaleUp: {
+          "0%": { transform: "scale(0.95)" },
+          "100%": { transform: "scale(1)" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 1.7s ease-in-out",
+        scaleUp: "scaleUp 0.7s ease-in-out",
+      },
     },
     backgroundImage: {
       "background-pattern": "url('./assets/background.svg')",

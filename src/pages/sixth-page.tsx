@@ -40,12 +40,12 @@ const SixthPage = () => {
         />
       </Helmet>
       <div className="flex flex-col gap-20 md:gap-12 xl:gap-24 md:flex-row  justify-center items-center">
-        <h3
+        <h1
           ref={headingRef}
           className=" text-2xl font-bold font-work-sans md:hidden animate-duration-[500ms]"
         >
           About Us
-        </h3>
+        </h1>
 
         <div
           ref={imageRef}

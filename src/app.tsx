@@ -12,8 +12,9 @@ import { useRef } from "react";
 import useIntersectionObserver from "./pages/reusableHooks";
 
 const ogData = {
-  title: "Spotlight One Home Page",
-  description: "Spotlight One Home Page",
+  title: "Spotlight One - Empowering Talent in the Entertainment Industry",
+  description:
+    "Spotlight One is the ultimate platform for casting directors and performers, offering cutting-edge tools and opportunities to connect, collaborate, and succeed in the entertainment industry. Join us and elevate your casting experience.",
   url: "https://spotlightone.com/",
   image: "https://cdn.stg.spotlightone.com/images/talentonboarding.png",
   siteName: "Spotlight One",
