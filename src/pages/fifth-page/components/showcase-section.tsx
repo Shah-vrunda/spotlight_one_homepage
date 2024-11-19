@@ -1,7 +1,7 @@
-import React from "preact/compat";
+import React, { ReactNode } from "preact/compat";
 
 interface ShowcaseSectionProps {
-  title: string;
+  title: ReactNode;
   description: string;
   titleClassName?: string;
   descriptionClassName?: string;
