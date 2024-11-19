@@ -43,36 +43,36 @@ const SecondPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Apply the useIntersectionObserver hook to each circle
-  useIntersectionObserver(
-    topLeftCircleRef,
-    "animate-fade-down",
-    "animate-delay-[300ms]"
-  );
-  useIntersectionObserver(
-    topRightCircleRef,
-    "animate-fade-down",
-    "animate-delay-[300ms]"
-  );
-  useIntersectionObserver(
-    bottomRightCircleRef,
-    "animate-fade-up",
-    "animate-delay-[300ms]"
-  );
-  useIntersectionObserver(
-    bottomLeftCircleRef,
-    "animate-fade-up",
-    "animate-delay-[300ms]"
-  );
-  useIntersectionObserver(
-    bottomCenterCircleRef,
-    "animate-fade-up",
-    "animate-delay-[300ms]"
-  );
-  useIntersectionObserver(
-    topCenterCircleRef,
-    "animate-fade-down",
-    "animate-delay-[300ms]"
-  );
+  // useIntersectionObserver(
+  //   topLeftCircleRef,
+  //   "animate-fade-down",
+  //   "animate-delay-[300ms]"
+  // );
+  // useIntersectionObserver(
+  //   topRightCircleRef,
+  //   "animate-fade-down",
+  //   "animate-delay-[300ms]"
+  // );
+  // useIntersectionObserver(
+  //   bottomRightCircleRef,
+  //   "animate-fade-up",
+  //   "animate-delay-[300ms]"
+  // );
+  // useIntersectionObserver(
+  //   bottomLeftCircleRef,
+  //   "animate-fade-up",
+  //   "animate-delay-[300ms]"
+  // );
+  // useIntersectionObserver(
+  //   bottomCenterCircleRef,
+  //   "animate-fade-up",
+  //   "animate-delay-[300ms]"
+  // );
+  // useIntersectionObserver(
+  //   topCenterCircleRef,
+  //   "animate-fade-down",
+  //   "animate-delay-[300ms]"
+  // );
   const textContentRefs = useRef(carouselSlides.map(() => createRef()));
 
   textContentRefs.current.forEach((textContentRef, index) => {
