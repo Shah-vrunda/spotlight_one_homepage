@@ -26,7 +26,7 @@ const SixthPage = () => {
   return (
     <div
       id="about-us"
-      className="screen5 w-full py-8 md:py-20 md:px-24 bg-[#51025E] text-[#fffaeb]"
+      className="screen5 w-full py-8 md:py-20 max-h-lvh md:px-24 bg-[#51025E] text-[#fffaeb]"
     >
       <Helmet>
         <title>Spotlight One About Us</title>
@@ -39,7 +39,7 @@ const SixthPage = () => {
           content="about spotlight one, spotlight one about, spotlight one information, spotlight one details, spotlight one overview, spotlight one company, spotlight one mission, spotlight one vision, spotlight one team, spotlight one history, spotlight one background, spotlight one services, spotlight one platform, spotlight one casting, spotlight one talent, spotlight one entertainment, spotlight one film industry, spotlight one casting directors, spotlight one performers"
         />
       </Helmet>
-      <div className="flex flex-col gap-20 md:gap-4 md:flex-row items-center">
+      <div className="flex flex-col gap-20 md:gap-12 xl:gap-24 md:flex-row  justify-center items-center">
         <h3
           ref={headingRef}
           className=" text-2xl font-bold font-work-sans md:hidden animate-duration-[500ms]"
@@ -49,7 +49,7 @@ const SixthPage = () => {
 
         <div
           ref={imageRef}
-          className="flex justify-center w-[80%] md:w-[50%] md:animate-fade-right animate-duration-[1000ms]"
+          className="  md:animate-fade-right animate-duration-[1000ms]"
         >
           <img
             src="/about.svg"
