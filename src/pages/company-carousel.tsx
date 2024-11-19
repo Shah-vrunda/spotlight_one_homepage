@@ -134,7 +134,7 @@ const Carousel = () => {
           content="spotlight one, spotlight, casting, spotlight india, india casting, largest casting software, largest casting software company, spotlight one global brands"
         />
       </Helmet>
-      <div className="flex flex-col pt-12 pb-28">
+      <div className="flex flex-col pt-12 pb-10 md:pb-28">
         <div className="text-white font-work-sans text-[35px] font-medium leading-normal self-center pb-10">
           Our Global Brands
         </div>
