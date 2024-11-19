@@ -31,8 +31,6 @@ const FirstPage = () => {
       className="screen1 flex lg:flex-row flex-col-reverse w-full text-[#fffaeb] justify-center bg-[#040301] items-center"
     >
       <Helmet>
-        <title>Spotlight One - Home Page</title>
-        <meta name="description" content="spoltight-one home page" />
         <meta
           name="keywords"
           content="spotlight-one, spotlight, casting, spotlight india, india casting, largest casting software, largest casting software company"

@@ -7,8 +7,6 @@ const BottomNavigation = () => {
       id="footer"
     >
       <Helmet>
-        <title>Spotlight One - Bottom Navigation</title>
-        <meta name="description" content="Spotlight One bottom navigation" />
         <meta
           name="keywords"
           content="Spotlight One, bottom navigation, spotlight one privacy policy, spotlight one help, spotlight one contact"

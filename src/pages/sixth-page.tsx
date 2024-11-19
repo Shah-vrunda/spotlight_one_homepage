@@ -29,11 +29,6 @@ const SixthPage = () => {
       className="screen5 w-full py-8 md:py-20 md:px-24 bg-[#51025E] text-[#fffaeb]"
     >
       <Helmet>
-        <title>Spotlight One About Us</title>
-        <meta
-          name="description"
-          content="Spotlight One is a subsidiary of Talent Systems LLC, the leading technology solution provider for casting and auditioning to the entertainment industry globally."
-        />
         <meta
           name="keywords"
           content="about spotlight one, spotlight one about, spotlight one information, spotlight one details, spotlight one overview, spotlight one company, spotlight one mission, spotlight one vision, spotlight one team, spotlight one history, spotlight one background, spotlight one services, spotlight one platform, spotlight one casting, spotlight one talent, spotlight one entertainment, spotlight one film industry, spotlight one casting directors, spotlight one performers"

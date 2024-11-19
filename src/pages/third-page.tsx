@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import useIntersectionObserver from "./reusableHooks";
-import { Helmet } from "react-helmet";
 
 const ThirdPage = () => {
   const headingRef = useRef(null);
@@ -28,13 +27,6 @@ const ThirdPage = () => {
 
   return (
     <div className="screen3 flex w-full bg-[#fffaeb] relative p-10 md:p-0">
-      <Helmet>
-        <title>Spotlight One - Made In India</title>
-        <meta
-          name="description"
-          content="Spotlight One made in India, made for India"
-        />
-      </Helmet>
       <div className="w-full flex flex-col md:flex-row justify-between md:pt-16 md:pb-36 md:px-40 z-10 relative">
         <div className=" flex flex-col md:w-[60%] gap-8 md:gap-14 text-[#270530] justify-center">
           <h1

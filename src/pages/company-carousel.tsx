@@ -127,8 +127,6 @@ const Carousel = () => {
   return (
     <div className="bg-background-pattern bg-cover " id="company-carousel">
       <Helmet>
-        <title>Spotlight one global brands</title>
-        <meta name="description" content="Spotlight one global brands" />
         <meta
           name="keywords"
           content="spotlight one, spotlight, casting, spotlight india, india casting, largest casting software, largest casting software company, spotlight one global brands"

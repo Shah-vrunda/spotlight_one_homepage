@@ -91,32 +91,9 @@ const SecondPage = () => {
   return (
     <>
       <Helmet>
-        <title>Explore Opportunities in Entertainment - Spotlight One</title>
-        <meta
-          name="description"
-          content="Join Spotlight One to access a wide range of opportunities in the entertainment industry. Whether you're an actor, musician, or performer, our platform connects you with casting directors and projects."
-        />
         <meta
           name="keywords"
           content="entertainment, acting, casting, performances, auditions, acting career, casting platform, Spotlight One"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="author" content="Spotlight One" />
-
-        <meta
-          property="og:title"
-          content="Explore Opportunities in Entertainment - Spotlight One"
-        />
-        <meta
-          property="og:description"
-          content="Discover new horizons in the entertainment industry with Spotlight One. Access auditions, casting calls, and unique opportunities to showcase your talent."
-        />
-        <meta property="og:url" content="https://www.spotlightone.com/" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content=" https://cdn.stg.spotlightone.com/images/talentonboarding.png"
         />
       </Helmet>
       <Swiper

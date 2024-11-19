@@ -6,7 +6,6 @@ import Modal from "./components/modal";
 import Clients from "./components/clients";
 import Talents from "./components/talents";
 import useIntersectionObserver from "../reusableHooks";
-import { Helmet } from "react-helmet";
 
 const FifthPage = () => {
   const [expandedState, setExpandedState] = useState({
@@ -24,13 +23,6 @@ const FifthPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Spotlight One - Casting Solutions for Clients and Talent</title>
-        <meta
-          name="description"
-          content="Discover how Spotlight One revolutionizes casting for clients and talent alike. Providing clients with unparalleled efficiency and control, while offering talent a platform to shine and realize their full potential."
-        />
-      </Helmet>
       <div
         id="our-solution"
         className="flex flex-col items-center h-screen w-full bg-[#270530] justify-evenly pb-8 md:pb-12 lg:pb-16"

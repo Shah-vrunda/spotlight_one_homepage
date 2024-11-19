@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import useIntersectionObserver from "./reusableHooks";
-import { Helmet } from "react-helmet";
 
 const FourthPage = () => {
   const titleRef = useRef(null);
@@ -37,13 +36,6 @@ const FourthPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Casting Director's Platform - Spotlight One</title>
-        <meta
-          name="description"
-          content="Spotlight One empowers casting directors with a dedicated platform to discover and cast exceptional talent across India. Experience the freedom of streamlined casting processes, precise role matching, and centralized data management for efficient collaboration and support."
-        />
-      </Helmet>
       <div
         className="screen4 text-[#fffaeb] py-10 px-10 md:pt-28 md:pb-28 flex justify-center w-full bg-[#51025e] h-auto relative"
         id="our-features"

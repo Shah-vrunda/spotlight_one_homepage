@@ -46,8 +46,6 @@ const Navbar = () => {
       style={{ backgroundColor: navbarFilled ? "#51025e" : "#fffaeb" }}
     >
       <Helmet>
-        <title>Spotlight One - Navbar</title>
-        <meta name="description" content="Spotlight One navigation bar" />
         <meta
           name="keywords"
           content="Spotlight One, navigation bar, spotlight one home, spotlight one solution, spotlight one about us, , spotlight one signup ,  spotlight one login/signup, spotlight one login page, spotlight one signup page"
