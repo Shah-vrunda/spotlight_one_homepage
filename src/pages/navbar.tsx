@@ -116,7 +116,7 @@ const Navbar = () => {
             About Us
           </a>
           <a
-            href="https://stg.spotlightone.com/signin"
+            href="https://spotlightone.com/signin"
             target={"_blank"}
             className={`${
               navbarFilled

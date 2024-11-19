@@ -81,6 +81,46 @@ const brands = [
     alt: "staff-me-up",
     className: "carousel-image",
   },
+  {
+    src: "cast-it-reach",
+    alt: "cast-it-reach",
+    className: "carousel-image",
+  },
+  {
+    src: "cast-it-systems",
+    alt: "cast-it-systems",
+    className: "carousel-image",
+  },
+  {
+    src: "cast-it-talent",
+    alt: "cast-it-talent",
+    className: "carousel-image",
+  },
+  {
+    src: "casting-networks",
+    alt: "casting-networks",
+    className: "carousel-image",
+  },
+  {
+    src: "spotlight-coloured",
+    alt: "spotlight-coloured",
+    className: "carousel-image",
+  },
+  {
+    src: "tagmin",
+    alt: "tagmin",
+    className: "carousel-image",
+  },
+  {
+    src: "casting-frontier",
+    alt: "casting-frontier",
+    className: "carousel-image",
+  },
+  {
+    src: "staff-me-up",
+    alt: "staff-me-up",
+    className: "carousel-image",
+  },
 ];
 
 const Carousel = () => {
@@ -99,8 +139,8 @@ const Carousel = () => {
           Our Global Brands
         </div>
 
-        <div className="flex overflow-hidden items-center justify-center relative h-36">
-          <div className="flex animate-slide justify-center">
+        <div className="flex overflow-hidden items-center justify-center relative h-36 slider">
+          <div className="flex justify-center gap-24 slide-track">
             {brands.map((brand, index) => (
               <img
                 key={index}
