@@ -25,9 +25,8 @@ html {
 }
 
 .slider {
-	margin: auto;
-	overflow:hidden;
-	position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 &::before,
@@ -56,5 +55,3 @@ html {
   display: flex;
   width: calc(260px * 14);
 }
-
-
