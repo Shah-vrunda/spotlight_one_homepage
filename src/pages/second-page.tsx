@@ -1,4 +1,4 @@
-import { createRef, useRef } from "react";
+import { createRef, useRef, useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import "./swipe.css";
@@ -40,6 +40,7 @@ const SecondPage = () => {
   const bottomLeftCircleRef = useRef(null);
   const bottomCenterCircleRef = useRef(null);
   const topCenterCircleRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   // Apply the useIntersectionObserver hook to each circle
   useIntersectionObserver(
@@ -85,6 +86,7 @@ const SecondPage = () => {
       "animate-duration-[2000ms]"
     );
   });
+  console.log(activeIndex);
 
   return (
     <Swiper
@@ -103,6 +105,7 @@ const SecondPage = () => {
       spaceBetween={0}
       speed={800}
       loop={true}
+      onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
     >
       {carouselSlides.map((slide, index) => (
         <SwiperSlide key={index} className="bg-cover bg-center">
@@ -113,7 +116,11 @@ const SecondPage = () => {
           />
           <div
             ref={textContentRefs.current[index]}
-            className={`absolute inset-y-0 ${slide.textContentClassName} flex items-center justify-center w-1/2 text-white p-3 md:p-4`}
+            className={`absolute inset-y-0 ${
+              slide.textContentClassName
+            } flex items-center justify-center w-1/2 text-white p-3 md:p-4 ${
+              index === activeIndex ? slide.textContentClassName : "opacity-0"
+            }`}
           >
             <div className="flex flex-col gap-8 lg:w-[60%]">
               <h2 className="text-md md:text-5xl font-work-sans lg:text-7xl font-bold">
