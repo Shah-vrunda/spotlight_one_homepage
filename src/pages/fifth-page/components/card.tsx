@@ -22,8 +22,6 @@ const PhotoCard = ({
   const [hoverState, setHoverState] = useState(false);
   const deviceType = useDeviceType();
 
-  console.log(deviceType);
-
   const divRef = useRef(null);
   useIntersectionObserver(
     divRef,
@@ -36,7 +34,7 @@ const PhotoCard = ({
       {!hoverState && (
         <div
           ref={divRef}
-          className="flex flex-col bg-[#FFFAEB] overflow-hidden transition-all duration-300 ease-in-out  md:h-[50%] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms]"
+          className="flex flex-col bg-[#FFFAEB] overflow-hidden md:h-[50%] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms] transition-transform duration-700 ease-in-out delay-150"
           onMouseEnter={() => deviceType === "lg" && setHoverState(true)}
         >
           <div className="w-full relative h-[75%] pb-[33%]">
@@ -66,7 +64,7 @@ const PhotoCard = ({
 
       {hoverState && deviceType === "lg" && (
         <div
-          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-300 ease-in-out   opacity-80 ${
+          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-700 ease-in-out opacity-80 animate-fadeIn animate-scaleUp ${
             photoName === "cd"
               ? "bg-cd-background-pattern"
               : "bg-talent-background-pattern"
