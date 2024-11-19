@@ -1,8 +1,19 @@
+import useIntersectionObserver from "../../reusableHooks";
 import ShowcaseSection from "./showcase-section";
+import { useRef } from "react";
 
 const TalentsContent = () => {
+  const divRef = useRef(null);
+  useIntersectionObserver(
+    divRef,
+    "animate-fade-left",
+    "animate-duration-[180ms]"
+  );
   return (
-    <div className="flex flex-row mt-4 animate-fade-left p-6 bg-transparent gap-12">
+    <div
+      ref={divRef}
+      className="flex flex-row mt-4 animate-fade-left animate-duration-[180ms] p-6 bg-transparent gap-12"
+    >
       <div className="flex flex-col gap-3 h-full lg:gap-12">
         <ShowcaseSection
           title="Get Access to Nationwide Opportunities :"

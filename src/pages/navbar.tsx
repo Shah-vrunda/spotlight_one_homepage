@@ -54,7 +54,7 @@ const Navbar = () => {
         />
       </Helmet>
       <div className="flex w-full lg:w-[35%] justify-between flex-shrink-0 text-white mr-6">
-        <a className="flex gap-4 items-center" href="#home">
+        <a className="flex gap-4 items-center active:" href="#home">
           <img
             src={navbarFilled ? "/spotlight.svg" : "/primary-logo-purple.svg"}
             alt="Spotlight one logo"
@@ -94,24 +94,24 @@ const Navbar = () => {
           className={`${
             navbarFilled
               ? "text-[#fffaeb] hover:text-gray-200"
-              : "text-[#51025e] "
+              : "text-[#51025e]"
           } text-[22px] md:text:md font-medium lg:flex-grow  lg:flex lg:gap-7 lg:justify-evenly lg:items-center lg:`}
         >
           <a
             href="#home"
-            className="block hover:animate-jump mt-4 lg:inline-block lg:mt-0  mr-4"
+            className="block hover:opacity-90 mt-4 lg:inline-block lg:mt-0  mr-4"
           >
             Home
           </a>
           <a
             href="#our-solution"
-            className="block mt-4 hover:animate-jump lg:inline-block lg:mt-0  mr-4"
+            className="block mt-4 hover:opacity-90 lg:inline-block lg:mt-0  mr-4"
           >
             Our Solution
           </a>
           <a
             href="#about-us"
-            className="block mt-4 hover:animate-jump lg:inline-block lg:mt-0  mr-4"
+            className="block mt-4 hover:opacity-90 lg:inline-block lg:mt-0  mr-4"
           >
             About Us
           </a>

@@ -10,17 +10,17 @@ const SixthPage = () => {
   useIntersectionObserver(
     imageRef,
     "animate-fade",
-    "animate-duration-[2000ms]"
+    "animate-duration-[1000ms]"
   );
   useIntersectionObserver(
     headingRef,
     "animate-fade-left",
-    "animate-duration-[1000ms]"
+    "animate-duration-[500ms]"
   );
   useIntersectionObserver(
     textRef,
     "animate-fade-left",
-    "animate-delay-[500ms]"
+    "animate-delay-[180ms]"
   );
 
   return (
@@ -40,16 +40,16 @@ const SixthPage = () => {
         />
       </Helmet>
       <div className="flex flex-col gap-20 md:gap-4 md:flex-row items-center">
-        <text
+        <h3
           ref={headingRef}
-          className=" text-2xl font-bold font-work-sans md:hidden animate-duration-[1000ms]"
+          className=" text-2xl font-bold font-work-sans md:hidden animate-duration-[500ms]"
         >
           About Us
-        </text>
+        </h3>
 
         <div
           ref={imageRef}
-          className="flex justify-center w-[80%] md:w-[50%] animate-fade animate-duration-[2000ms]"
+          className="flex justify-center w-[80%] md:w-[50%] md:animate-fade-right animate-duration-[1000ms]"
         >
           <img
             src="/about.svg"
@@ -59,15 +59,15 @@ const SixthPage = () => {
         </div>
         <div className="w-[80%] md:w-[50%]">
           <div className="flex flex-col xl:gap-20 lg:gap-8 md:gap-5 justify-center h-full">
-            <text
+            <h3
               ref={headingRef}
-              className="text-5xl animate-fade-left animate-duration-[1000ms] font-bold font-work-sans hidden md:inline-block"
+              className="text-5xl animate-fade-left animate-duration-[500ms] font-bold font-work-sans hidden md:inline-block"
             >
               About Us
-            </text>
+            </h3>
             <text
               ref={textRef}
-              className="font-medium animate-fade-left animate-delay-[500ms] text-base leading-7 font-wix-madefor-display text-justify"
+              className="font-medium animate-fade-left animate-delay-[180ms] text-base leading-7 font-wix-madefor-display text-justify"
             >
               Spotlight One is a subsidiary of Talent Systems LLC, the leading
               technology solution provider for casting and auditioning to the

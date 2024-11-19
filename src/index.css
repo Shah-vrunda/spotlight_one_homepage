@@ -15,6 +15,10 @@
   animation: slide 20s linear infinite;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-slide {
     animation-play-state: paused;

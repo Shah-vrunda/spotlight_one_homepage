@@ -27,12 +27,12 @@ const FifthPage = () => {
         id="our-solution"
         className="flex flex-col items-center h-screen w-full bg-[#270530] justify-evenly pb-8 md:pb-12 lg:pb-16"
       >
-        <h1
+        <h2
           className="text-[#FFFAEB] font-bold text-3xl font-work-sans lg:text-5xl leading-normal"
           ref={headingRef}
         >
           Why Spotlight One?
-        </h1>
+        </h2>
         <div className="flex flex-col gap-6 w-full lg:flex-row  items-center md:justify-center">
           <PhotoCard
             photoName="cd"

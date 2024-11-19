@@ -45,32 +45,32 @@ const SecondPage = () => {
   useIntersectionObserver(
     topLeftCircleRef,
     "animate-fade-down",
-    "animate-delay-[1000ms]"
+    "animate-delay-[300ms]"
   );
   useIntersectionObserver(
     topRightCircleRef,
     "animate-fade-down",
-    "animate-delay-[1000ms]"
+    "animate-delay-[300ms]"
   );
   useIntersectionObserver(
     bottomRightCircleRef,
     "animate-fade-up",
-    "animate-delay-[1000ms]"
+    "animate-delay-[300ms]"
   );
   useIntersectionObserver(
     bottomLeftCircleRef,
     "animate-fade-up",
-    "animate-delay-[1000ms]"
+    "animate-delay-[300ms]"
   );
   useIntersectionObserver(
     bottomCenterCircleRef,
     "animate-fade-up",
-    "animate-delay-[1000ms]"
+    "animate-delay-[300ms]"
   );
   useIntersectionObserver(
     topCenterCircleRef,
     "animate-fade-down",
-    "animate-delay-[1000ms]"
+    "animate-delay-[300ms]"
   );
   const textContentRefs = useRef(carouselSlides.map(() => createRef()));
 
@@ -130,37 +130,37 @@ const SecondPage = () => {
             src="/top-left-circle.svg"
             alt="top-left-circle"
             ref={topLeftCircleRef}
-            className="absolute top-0 left-0 hidden lg:flex animate-delay-[1000ms] animate-fade-down"
+            className="absolute top-0 left-0 hidden lg:flex animate-delay-[300ms] animate-fade-down"
           />
           <img
             src="/top-right-circle.svg"
             alt="top-right-circle"
             ref={topRightCircleRef}
-            className="absolute top-0 right-0 hidden lg:flex animate-delay-[1000ms] animate-fade-down"
+            className="absolute top-0 right-0 hidden lg:flex animate-delay-[300ms] animate-fade-down"
           />
           <img
             ref={bottomRightCircleRef}
             src="/bottom-right-circle.svg"
             alt="bottom-right-circle"
-            className="absolute right-0 bottom-0 hidden lg:flex animate-delay-[1000ms] animate-fade-up"
+            className="absolute right-0 bottom-0 hidden lg:flex animate-delay-[300ms] animate-fade-up"
           />
           <img
             ref={bottomLeftCircleRef}
             src="/bottom-left-circle.svg"
             alt="bottom-left-circle"
-            className="absolute left-12 bottom-0 hidden lg:flex animate-delay-[1000ms] animate-fade-up"
+            className="absolute left-12 bottom-0 hidden lg:flex animate-delay-[300ms] animate-fade-up"
           />
           <img
             ref={bottomCenterCircleRef}
             src="/bottom-center-circle.svg"
             alt="bottom-center-circle"
-            className="absolute bottom-0 inset-x-2/3 hidden lg:flex animate-delay-[1000ms] animate-fade-up"
+            className="absolute bottom-0 inset-x-2/3 hidden lg:flex animate-delay-[300ms] animate-fade-up"
           />
           <img
             ref={topCenterCircleRef}
             src="/top-center-circle.svg"
             alt="top-center-circle"
-            className="absolute top-0 inset-x-2/4 mx-auto hidden lg:flex animate-delay-[1000ms] animate-fade-down"
+            className="absolute top-0 inset-x-2/4 mx-auto hidden lg:flex animate-delay-[300ms] animate-fade-down"
           />
         </SwiperSlide>
       ))}

@@ -11,15 +11,19 @@ const ThirdPage = () => {
   useIntersectionObserver(
     headingRef,
     "animate-fade-right",
-    "animate-duration-[4000ms]"
+    "animate-duration-[500ms]"
   );
 
-  useIntersectionObserver(textRef, "animate-fade-right", "animate-delay-500");
+  useIntersectionObserver(
+    textRef,
+    "animate-fade-right",
+    "animate-delay-[180ms]"
+  );
 
   useIntersectionObserver(
     imageRef,
     "animate-fade",
-    "animate-duration-[3000ms]"
+    "animate-duration-[1000ms]"
   );
 
   return (
@@ -33,16 +37,16 @@ const ThirdPage = () => {
       </Helmet>
       <div className="w-full flex flex-col md:flex-row justify-between md:pt-16 md:pb-36 md:px-40 z-10 relative">
         <div className=" flex flex-col md:w-[60%] gap-8 md:gap-14 text-[#270530] justify-center">
-          <div
+          <h3
             ref={headingRef}
-            className="flex flex-col gap-2 font-work-sans text-4xl animate-fade-right animate-duration-[4000ms] md:text-5xl font-bold"
+            className="flex flex-col gap-2 font-work-sans text-4xl animate-fade-right animate-duration-[500ms] md:text-5xl font-bold"
           >
             <text>Made in India,</text>
             <text>Made for India</text>
-          </div>
+          </h3>
           <text
             ref={textRef}
-            className="flex flex-col text-md md:text-[26px] font-normal font-wix-madefor-display animate-fade-right animate-duration-[2000ms] animate-delay-500"
+            className="flex flex-col text-md md:text-[26px] font-normal font-wix-madefor-display animate-fade-right animate-delay-[180ms]"
           >
             <span>Spotlight One has been developed in </span>
             <span>consultation with the country’s foremost</span>
@@ -51,7 +55,7 @@ const ThirdPage = () => {
         </div>
         <div
           ref={imageRef}
-          className="md:w-[40%] mt-4 md:mt-0 pb-[10%] md:pb-0 h-[380px] md:h-full flex justify-center animate-fade animate-duration-[3000ms]"
+          className="md:w-[40%] mt-4 md:mt-0 pb-[10%] md:pb-0 h-[380px] md:h-full flex justify-center animate-fade animate-duration-[1000ms]"
         >
           <img
             src="3rd-screen.svg"

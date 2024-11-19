@@ -1,6 +1,8 @@
 import { useState } from "preact/hooks";
+import { useRef } from "preact/hooks";
 import useDeviceType from "../../../hooks/get-device-type";
 import { FaChevronDown } from "react-icons/fa";
+import useIntersectionObserver from "../../reusableHooks";
 
 interface PhotoCardProps {
   photoName: string;
@@ -20,11 +22,19 @@ const PhotoCard = ({
   const [hoverState, setHoverState] = useState(false);
   const deviceType = useDeviceType();
 
+  const divRef = useRef(null);
+  useIntersectionObserver(
+    divRef,
+    "animate-fade-left",
+    "animate-duration-[180ms]"
+  );
+
   return (
     <>
       {!hoverState && (
         <div
-          className="flex flex-col bg-[#FFFAEB] overflow-hidden transition-all duration-300 ease-in-out  md:h-[50vh] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105"
+          ref={divRef}
+          className="flex flex-col bg-[#FFFAEB] overflow-hidden transition-all duration-300 ease-in-out  md:h-[50vh] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms]"
           onMouseEnter={() => deviceType === "lg" && setHoverState(true)}
         >
           <div
@@ -57,7 +67,7 @@ const PhotoCard = ({
 
       {hoverState && deviceType === "lg" && (
         <div
-          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-300 ease-in-out animate-fade opacity-80 ${
+          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-300 ease-in-out   opacity-80 ${
             photoName === "cd"
               ? "bg-cd-background-pattern"
               : "bg-talent-background-pattern"
