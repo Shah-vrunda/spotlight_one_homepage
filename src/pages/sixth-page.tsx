@@ -17,7 +17,8 @@ const SixthPage = () => {
       <div className="flex flex-col gap-20 md:gap-12 xl:gap-24 md:flex-row  justify-center items-center">
         <h1
           data-aos="fade-left"
-          className=" text-2xl font-bold font-work-sans md:hidden animate-duration-[500ms]"
+          data-aos-duration="500"
+          className=" text-2xl font-bold font-work-sans md:hidden"
         >
           About Us
         </h1>
@@ -37,7 +38,7 @@ const SixthPage = () => {
               About Us
             </h3>
             <text
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-delay="50"
               className="font-medium text-base leading-7 font-wix-madefor-display text-justify"
             >
