@@ -51,7 +51,7 @@ html {
 }
 
 .slide-track {
-  animation: scroll 15s linear infinite;
+  animation: scroll 30s linear infinite;
   display: flex;
-  width: calc(260px * 14);
+  width: calc(260px * 16);
 }

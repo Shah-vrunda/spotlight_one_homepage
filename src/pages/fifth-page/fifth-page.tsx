@@ -1,25 +1,16 @@
-import { useRef, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 import PhotoCard from "./components/card";
 import ClientsContent from "./components/clients-content";
 import TalentsContent from "./components/talents-content";
 import Modal from "./components/modal";
 import Clients from "./components/clients";
 import Talents from "./components/talents";
-import useIntersectionObserver from "../reusableHooks";
 
 const FifthPage = () => {
   const [expandedState, setExpandedState] = useState({
     clients: false,
     talents: false,
   });
-
-  const headingRef = useRef(null);
-
-  useIntersectionObserver(
-    headingRef,
-    "animate-fade-down",
-    "animate-delay-[100ms]"
-  );
 
   return (
     <>
@@ -28,8 +19,9 @@ const FifthPage = () => {
         className="flex flex-col items-center h-screen w-full bg-[#270530] justify-evenly pb-8 md:pb-12 lg:pb-16"
       >
         <h1
+          data-aos="fade-down"
+          data-aos-delay="100"
           className="text-[#FFFAEB] font-bold text-3xl font-work-sans lg:text-5xl leading-normal mt-12"
-          ref={headingRef}
         >
           Why Spotlight One?
         </h1>

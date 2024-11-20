@@ -1,8 +1,6 @@
 import { useState } from "preact/hooks";
-import { useRef } from "preact/hooks";
 import useDeviceType from "../../../hooks/get-device-type";
 import { FaChevronDown } from "react-icons/fa";
-import useIntersectionObserver from "../../reusableHooks";
 
 interface PhotoCardProps {
   photoName: string;
@@ -22,18 +20,12 @@ const PhotoCard = ({
   const [hoverState, setHoverState] = useState(false);
   const deviceType = useDeviceType();
 
-  const divRef = useRef(null);
-  useIntersectionObserver(
-    divRef,
-    "animate-fade-left",
-    "animate-duration-[180ms]"
-  );
-
   return (
     <>
       {!hoverState && (
         <div
-          ref={divRef}
+          data-aos="fade-up"
+          data-aos-once="true"
           className="flex flex-col bg-[#FFFAEB] overflow-hidden md:h-[50%] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms] transition-transform duration-700 ease-in-out delay-150"
           onMouseEnter={() => deviceType === "lg" && setHoverState(true)}
         >

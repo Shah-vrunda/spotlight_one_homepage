@@ -1,10 +1,10 @@
-import { createRef, useRef, useState } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import "./swipe.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import useIntersectionObserver from "./reusableHooks";
 import { Helmet } from "react-helmet";
+import AOS from "aos";
+import { useEffect } from "preact/hooks";
 
 const SecondPage = () => {
   const carouselSlides = [
@@ -13,80 +13,26 @@ const SecondPage = () => {
       heading: "Access",
       subHeading:
         "One platform for talented performers to access viable opportunities and genuine casting directors in the Indian film and entertainment industry.",
-      textContentClassName:
-        "right-0 animate-fade-left animate-duration-[2000ms]",
+      textContentClassName: "right-0",
+      animation: "fade-left",
     },
     {
       image: "carousel2.png",
       heading: "Inclusion",
       subHeading:
         "One platform to promote talented performers, irrespective of caste, religion, gender, geography or social status",
-      textContentClassName:
-        "left-0 animate-fade-right animate-duration-[2000ms]",
+      textContentClassName: "left-0",
+      animation: "fade-right",
     },
-
     {
       image: "carousel3.png",
       heading: "Expression",
       subHeading:
         "One platform to unearth and nurture the performer's unique talents, with the help of India’s foremost casting directors.",
-      textContentClassName:
-        "right-0 animate-fade-left animate-duration-[2000ms]",
+      textContentClassName: "right-0",
+      animation: "fade-left",
     },
   ];
-
-  const topLeftCircleRef = useRef(null);
-  const topRightCircleRef = useRef(null);
-  const bottomRightCircleRef = useRef(null);
-  const bottomLeftCircleRef = useRef(null);
-  const bottomCenterCircleRef = useRef(null);
-  const topCenterCircleRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  // Apply the useIntersectionObserver hook to each circle
-  // useIntersectionObserver(
-  //   topLeftCircleRef,
-  //   "animate-fade-down",
-  //   "animate-delay-[300ms]"
-  // );
-  // useIntersectionObserver(
-  //   topRightCircleRef,
-  //   "animate-fade-down",
-  //   "animate-delay-[300ms]"
-  // );
-  // useIntersectionObserver(
-  //   bottomRightCircleRef,
-  //   "animate-fade-up",
-  //   "animate-delay-[300ms]"
-  // );
-  // useIntersectionObserver(
-  //   bottomLeftCircleRef,
-  //   "animate-fade-up",
-  //   "animate-delay-[300ms]"
-  // );
-  // useIntersectionObserver(
-  //   bottomCenterCircleRef,
-  //   "animate-fade-up",
-  //   "animate-delay-[300ms]"
-  // );
-  // useIntersectionObserver(
-  //   topCenterCircleRef,
-  //   "animate-fade-down",
-  //   "animate-delay-[300ms]"
-  // );
-  const textContentRefs = useRef(carouselSlides.map(() => createRef()));
-
-  textContentRefs.current.forEach((textContentRef, index) => {
-    // Use the classes from the carouselSlides array for each slide
-    const animationClass = carouselSlides[index].textContentClassName
-      .split(" ")
-      .find((cls) => cls.startsWith("animate-"));
-    useIntersectionObserver(
-      textContentRef,
-      animationClass,
-      "animate-duration-[2000ms]"
-    );
-  });
 
   return (
     <>
@@ -112,7 +58,6 @@ const SecondPage = () => {
         spaceBetween={0}
         speed={800}
         loop={true}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {carouselSlides.map((slide, index) => (
           <SwiperSlide key={index} className="bg-cover bg-center">
@@ -122,12 +67,8 @@ const SecondPage = () => {
               alt={`slide.heading`}
             />
             <div
-              ref={textContentRefs.current[index]}
-              className={`absolute inset-y-0 ${
-                slide.textContentClassName
-              } flex items-center justify-center w-1/2 text-white p-3 md:p-4 ${
-                index === activeIndex ? slide.textContentClassName : "opacity-0"
-              }`}
+              data-aos={slide.animation}
+              className={`absolute inset-y-0 ${slide.textContentClassName} flex items-center justify-center w-1/2 text-white p-3 md:p-4`}
             >
               <div className="flex flex-col gap-8 lg:w-[60%]">
                 <h1 className="text-md md:text-5xl font-work-sans lg:text-7xl font-bold">
@@ -139,42 +80,36 @@ const SecondPage = () => {
                 </h2>
               </div>
             </div>
-            {/* Circles */}
+
             <img
               src="top-left-circle.svg"
               alt="top-left-circle"
-              ref={topLeftCircleRef}
-              className="absolute top-0 left-0 hidden lg:flex animate-delay-[300ms] animate-fade-down"
+              className="absolute top-0 left-0 hidden lg:flex"
             />
             <img
               src="top-right-circle.svg"
               alt="top-right-circle"
-              ref={topRightCircleRef}
-              className="absolute top-0 right-0 hidden lg:flex animate-delay-[300ms] animate-fade-down"
+              className="absolute top-0 right-0 hidden lg:flex"
             />
             <img
-              ref={bottomRightCircleRef}
               src="bottom-right-circle.svg"
               alt="bottom-right-circle"
-              className="absolute right-0 bottom-0 hidden lg:flex animate-delay-[300ms] animate-fade-up"
+              className="absolute right-0 bottom-0 hidden lg:flex"
             />
             <img
-              ref={bottomLeftCircleRef}
               src="bottom-left-circle.svg"
               alt="bottom-left-circle"
-              className="absolute left-12 bottom-0 hidden lg:flex animate-delay-[300ms] animate-fade-up"
+              className="absolute left-12 bottom-0 hidden lg:flex"
             />
             <img
-              ref={bottomCenterCircleRef}
               src="bottom-center-circle.svg"
               alt="bottom-center-circle"
-              className="absolute bottom-0 inset-x-2/3 hidden lg:flex animate-delay-[300ms] animate-fade-up"
+              className="absolute bottom-0 inset-x-2/3 hidden lg:flex"
             />
             <img
-              ref={topCenterCircleRef}
               src="top-center-circle.svg"
               alt="top-center-circle"
-              className="absolute top-0 inset-x-2/4 mx-auto hidden lg:flex animate-delay-[300ms] animate-fade-down"
+              className="absolute top-0 inset-x-2/4 mx-auto hidden lg:flex"
             />
           </SwiperSlide>
         ))}

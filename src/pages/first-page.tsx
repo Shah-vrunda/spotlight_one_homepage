@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import { useInView } from "react-intersection-observer";
 
 const FirstPage = () => {
   return (
@@ -17,6 +16,7 @@ const FirstPage = () => {
         <div className=" flex flex-col justify-center gap-11 lg:items-start items-center p-3 mb-3 lg:p-0 lg:mb-0">
           <h1
             data-aos="fade-right"
+            data-aos-duration="2000"
             className={`text-3xl md:text-4xl lg:text-[50px] font-bold font-work-sans`}
           >
             Spotlight is now in India
@@ -24,6 +24,7 @@ const FirstPage = () => {
 
           <h2
             data-aos="fade-right"
+            data-aos-delay="500"
             className="text-sm md:text-lg lg:text-[22px] font-wix-madefor-display font-normal  flex flex-col gap-1 lg:gap-2"
           >
             <span>Spotlight - The home of casting is now in India.</span>
@@ -35,10 +36,8 @@ const FirstPage = () => {
       </div>
       <div className="flex justify-center">
         <img
-          data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
+          data-aos="fade-left"
+          data-aos-duration="2000"
           src="1st-screen.svg"
           alt="1st screen image"
           className="w-full h-[80%] md:h-[50%] lg:h-screen object"

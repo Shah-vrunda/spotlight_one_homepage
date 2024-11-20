@@ -8,8 +8,6 @@ import ThirdPage from "./pages/third-page";
 import FifthPage from "./pages/fifth-page/fifth-page";
 import Carousel from "./pages/company-carousel";
 import { Helmet } from "react-helmet";
-import { useRef } from "react";
-import useIntersectionObserver from "./pages/reusableHooks";
 
 const ogData = {
   title: "Spotlight One - Empowering Talent in the Entertainment Industry",
@@ -21,8 +19,6 @@ const ogData = {
 };
 
 export function App() {
-  const headingRef = useRef(null);
-  useIntersectionObserver(headingRef, "animate-fade", "animate-duration-600");
   return (
     <>
       <Helmet>
@@ -90,8 +86,9 @@ export function App() {
       <FirstPage />
 
       <div
-        ref={headingRef}
-        className="breaker1 bg-transparent flex justify-center items-center py-6 lg:py-10 text-3xl md:text-4xl lg:text-[50px] font-bold font-work-sans bg-[#FFFaeb] animate-fade animate-duration-600"
+        data-aos={"fade"}
+        data-aos-duration="600"
+        className="breaker1 bg-transparent flex justify-center items-center py-6 lg:py-10 text-3xl md:text-4xl lg:text-[50px] font-bold font-work-sans bg-[#FFFaeb] "
       >
         <text className="text-[#270530]">Our Values</text>
       </div>

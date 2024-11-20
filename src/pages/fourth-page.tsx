@@ -1,39 +1,4 @@
-import { useRef } from "react";
-import useIntersectionObserver from "./reusableHooks";
-
 const FourthPage = () => {
-  const titleRef = useRef(null);
-  const feature1Ref = useRef(null);
-  const feature2Ref = useRef(null);
-  const feature3Ref = useRef(null);
-  const taglineRef = useRef(null);
-
-  useIntersectionObserver(
-    titleRef,
-    "animate-fade-down",
-    "animate-duration-[500ms]"
-  );
-  useIntersectionObserver(
-    feature1Ref,
-    "animate-jump",
-    "animate-duration-[500ms]"
-  );
-  useIntersectionObserver(
-    feature2Ref,
-    "animate-jump",
-    "animate-duration-[500ms]"
-  );
-  useIntersectionObserver(
-    feature3Ref,
-    "animate-jump",
-    "animate-duration-[500ms]"
-  );
-  useIntersectionObserver(
-    taglineRef,
-    "animate-fade-up",
-    "animate-duration-[500ms]"
-  );
-
   return (
     <>
       <div
@@ -44,8 +9,9 @@ const FourthPage = () => {
           <div className="flex justify-center w-full">
             <div className="title flex flex-col justify-center gap-2 w-full">
               <h1
-                ref={titleRef}
-                className="animate-fade-down animate-duration-[500ms] font-bold text-md md:text-2xl self-center font-work-sans"
+                data-aos="fade-down"
+                data-aos-duration="500"
+                className="font-bold text-md md:text-2xl self-center font-work-sans"
               >
                 It’s the Casting Director’s Casting Platform
               </h1>
@@ -59,8 +25,9 @@ const FourthPage = () => {
           <div className="flex justify-evenly font-wix-madefor-display gap-8 md:gap-0 md:flex-row flex-col text-base font-normal">
             <div className="flex flex-col gap-4 md:gap-12  w-full md:w-1/4">
               <div
-                ref={feature1Ref}
-                className="rounded-full animate-jump animate-duration-[500ms] w-24 h-24 self-center"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                className="rounded-full w-24 h-24 self-center"
               >
                 <img
                   src="search.svg"
@@ -75,8 +42,9 @@ const FourthPage = () => {
             </div>
             <div className="flex flex-col gap-4 md:gap-12 w-full md:w-1/4">
               <div
-                ref={feature2Ref}
-                className="rounded-full w-24 h-24 self-center animate-jump animate-duration-[500ms]"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                className="rounded-full w-24 h-24 self-center"
               >
                 <img
                   src="list.svg"
@@ -90,8 +58,9 @@ const FourthPage = () => {
             </div>
             <div className="flex flex-col gap-4 md:gap-12  w-full md:w-1/4">
               <div
-                ref={feature3Ref}
-                className="rounded-full w-24 h-24 self-center animate-jump animate-duration-[500ms]"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                className="rounded-full w-24 h-24 self-center"
               >
                 <img
                   src="centralize.svg"
@@ -107,8 +76,9 @@ const FourthPage = () => {
           </div>
           <div className="flex justify-center">
             <h2
-              ref={taglineRef}
-              className="animate-fade-up animate-duration-[500ms] text:lg md:text-2xl font-normal font-wix-madefor-display text-center "
+              data-aos="fade-up"
+              data-aos-duration="500"
+              className="text:lg md:text-2xl font-normal font-wix-madefor-display text-center "
             >
               Experience casting freedom with Spotlight One, where technology
               meets talent.
@@ -116,7 +86,7 @@ const FourthPage = () => {
           </div>
         </div>
         <div className="absolute top-0 left-0 w-[6%] md:w-1/12 h-full overflow-hidden">
-          <div className="h-full animation-slide-down">
+          <div className="h-full">
             <svg
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
