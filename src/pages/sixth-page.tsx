@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import useIntersectionObserver from "./reusableHooks";
 import { Helmet } from "react-helmet";
 
 const SixthPage = () => {
@@ -16,7 +14,7 @@ const SixthPage = () => {
       </Helmet>
       <div className="flex flex-col gap-20 md:gap-12 xl:gap-24 md:flex-row  justify-center items-center">
         <h1
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-duration="500"
           className=" text-2xl font-bold font-work-sans md:hidden"
         >
@@ -32,13 +30,15 @@ const SixthPage = () => {
         <div className="w-[80%] md:w-[50%]">
           <div className="flex flex-col xl:gap-20 lg:gap-8 md:gap-5 justify-center h-full">
             <h3
-              data-aos="fade-left"
+              data-aos="fade-right"
+              data-offset="0"
               className="text-5xl  font-bold font-work-sans hidden md:inline-block"
             >
               About Us
             </h3>
             <text
-              data-aos="fade-right"
+              data-aos="fade"
+              data-offset="0"
               data-aos-delay="50"
               className="font-medium text-base leading-7 font-wix-madefor-display text-justify"
             >

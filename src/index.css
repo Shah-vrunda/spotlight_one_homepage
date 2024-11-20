@@ -53,5 +53,5 @@ html {
 .slide-track {
   animation: scroll 30s linear infinite;
   display: flex;
-  width: calc(260px * 16);
+  width: calc(260px * 14);
 }
