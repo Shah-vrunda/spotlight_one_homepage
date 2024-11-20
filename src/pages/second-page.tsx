@@ -3,8 +3,6 @@ import "swiper/swiper-bundle.css";
 import "./swipe.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
-import AOS from "aos";
-import { useEffect } from "preact/hooks";
 
 const SecondPage = () => {
   const carouselSlides = [
