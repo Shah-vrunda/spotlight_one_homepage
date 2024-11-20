@@ -21,7 +21,13 @@ const PhotoCard = ({
   const deviceType = useDeviceType();
 
   return (
-    <>
+    <div
+      className="h-full w-full"
+      data-aos="fade-up"
+      data-aos-offset="20"
+      data-aos-duration="5000"
+      data-aos-once="true"
+    >
       {!hoverState && (
         <div
           data-aos="fade-up"
@@ -29,7 +35,7 @@ const PhotoCard = ({
           className="flex flex-col bg-[#FFFAEB] overflow-hidden md:h-[50%] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms] transition-transform duration-700 ease-in-out delay-150"
           onMouseEnter={() => deviceType === "lg" && setHoverState(true)}
         >
-          <div className="w-full relative h-[75%] pb-[33%]">
+          <div className="w-full relative pb-[33%]">
             <img
               src={`./${photoName}.svg`}
               alt={`${photoName}-pic`}
@@ -56,7 +62,7 @@ const PhotoCard = ({
 
       {hoverState && deviceType === "lg" && (
         <div
-          className={`relative bg-cover bg-center md:h-[45vh] lg:h-[65vh] w-full mx-auto my-4 transition-all duration-700 ease-in-out opacity-80 animate-fadeIn animate-scaleUp ${
+          className={`relative bg-cover bg-center md:h-[45vh] h-full w-full mx-auto my-4 transition-all duration-700 ease-in-out opacity-80 animate-fadeIn ${
             photoName === "cd"
               ? "bg-cd-background-pattern"
               : "bg-talent-background-pattern"
@@ -78,7 +84,7 @@ const PhotoCard = ({
           <div className="relative z-10 h-full">{hoveredContent}</div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
