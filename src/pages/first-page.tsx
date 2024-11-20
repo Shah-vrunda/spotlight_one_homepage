@@ -1,19 +1,18 @@
 import { useRef } from "react";
 import { Helmet } from "react-helmet";
+import { useInView } from "react-intersection-observer";
 import useIntersectionObserver from "./reusableHooks";
 
 const FirstPage = () => {
-  // Create references for the elements you want to observe
-  const headingRef = useRef(null);
+  const [headingRef, isHeadingInview] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  // const animationClass = inView ? "animate-fade-right" : "";
   const paragraphRef = useRef(null);
   const imageRef = useRef(null);
 
-  // Apply the useIntersectionObserver hook to the elements
-  useIntersectionObserver(
-    headingRef,
-    "animate-fade-right",
-    "animate-duration-2000"
-  );
   useIntersectionObserver(
     paragraphRef,
     "animate-fade-right",
@@ -40,10 +39,13 @@ const FirstPage = () => {
         <div className=" flex flex-col justify-center gap-11 lg:items-start items-center p-3 mb-3 lg:p-0 lg:mb-0">
           <h1
             ref={headingRef}
-            className="text-3xl md:text-4xl lg:text-[50px] font-bold font-work-sans "
+            className={`text-3xl md:text-4xl lg:text-[50px] font-bold font-work-sans ${
+              isHeadingInview ? "animate-fade-right" : ""
+            }`}
           >
             Spotlight is now in India
           </h1>
+
           <h2
             ref={paragraphRef}
             className="text-sm md:text-lg lg:text-[22px] font-wix-madefor-display font-normal  flex flex-col gap-1 lg:gap-2"
