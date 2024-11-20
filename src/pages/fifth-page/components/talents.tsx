@@ -12,7 +12,7 @@ const Talents = ({ handleBack }: TalentsProps) => {
       id="talents"
     >
       <text className="text-2xl lg:text-4xl text-center font-work-sans font-bold leading-normal text-[#270530] self-start">
-        For Talents
+        For Talent
       </text>
       <div className="flex flex-col lg:flex-row items-center">
         <div className="flex flex-col lg:flex-row lg:space-x-12 md:gap-10">
