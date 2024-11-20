@@ -30,7 +30,7 @@ const BottomNavigation = () => {
         <a target={"_blank"} href="https://app.spotlightone.com/privacy-policy">
           Terms of Use
         </a>
-        <a href="/contact">Contact Us</a>
+        <a href="mailto:contact@spotlightone.com">Contact Us</a>
         <a
           target={"_blank"}
           href="https://app.spotlightone.com/terms-and-conditions"

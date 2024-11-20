@@ -20,7 +20,12 @@ const SixthPage = () => {
         >
           About Us
         </h1>
-        <div data-aos="fade-right" data-aos-duration="500" className="">
+        <div
+          data-aos="fade"
+          data-aos-duration="5000"
+          data-aos-delay="50"
+          className=""
+        >
           <img
             src="about.svg"
             alt="about us image"
@@ -30,7 +35,7 @@ const SixthPage = () => {
         <div className="w-[80%] md:w-[50%]">
           <div className="flex flex-col xl:gap-20 lg:gap-8 md:gap-5 justify-center h-full">
             <h3
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-offset="0"
               className="text-5xl  font-bold font-work-sans hidden md:inline-block"
             >
