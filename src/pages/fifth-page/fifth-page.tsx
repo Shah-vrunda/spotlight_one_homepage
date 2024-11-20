@@ -13,14 +13,6 @@ const FifthPage = () => {
     talents: false,
   });
 
-  const headingRef = useRef(null);
-
-  useIntersectionObserver(
-    headingRef,
-    "animate-fade-down",
-    "animate-delay-[100ms]"
-  );
-
   return (
     <>
       <div
@@ -29,7 +21,8 @@ const FifthPage = () => {
       >
         <h1
           className="text-[#FFFAEB] font-bold text-3xl font-work-sans lg:text-5xl leading-normal mt-12"
-          ref={headingRef}
+          data-aos="fade-down"
+          data-aos-duration="5000"
         >
           Why Spotlight One?
         </h1>
