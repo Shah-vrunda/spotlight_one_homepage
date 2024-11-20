@@ -24,7 +24,7 @@ const PhotoCard = ({
     <>
       {!hoverState && (
         <div
-          className="flex flex-col bg-[#FFFAEB] overflow-hidden md:h-[50%] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms] transition-transform duration-700 ease-in-out delay-150"
+          className="flex flex-col bg-[#FFFAEB] overflow-hidden h-[90%] md:h-[50%] lg:h-[65vh] w-full md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 relative hover:scale-105 hover:animate-fade-left hover:animate-duration-[180ms] transition-transform duration-700 ease-in-out delay-150"
           onMouseEnter={() => deviceType === "lg" && setHoverState(true)}
         >
           <div className="w-full relative h-[75%] pb-[33%]">
