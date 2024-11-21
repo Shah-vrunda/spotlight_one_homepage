@@ -3,9 +3,15 @@ import "swiper/swiper-bundle.css";
 import "./swipe.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
-import { motion, HTMLMotionProps, animate } from "framer-motion";
+import { HTMLMotionProps, motion } from "framer-motion";
 
 const SecondPage = () => {
+  type ExtendedMotionDivProps = HTMLMotionProps<"div"> & {
+    className?: string; // Adding className explicitly
+  };
+
+  const MotionDiv = motion.div as React.ComponentType<ExtendedMotionDivProps>;
+
   const carouselSlides = [
     {
       image: "carousel1.svg",
@@ -70,7 +76,7 @@ const SecondPage = () => {
               data-aos={slide.animation}
               className={`absolute inset-y-0 ${slide.textContentClassName} flex items-center justify-center w-1/2 text-white p-3 md:p-4`}
             >
-              <motion.div
+              <MotionDiv
                 className="flex flex-col gap-8 lg:w-[60%]"
                 initial={{
                   opacity: 0,
@@ -79,9 +85,10 @@ const SecondPage = () => {
                 whileInView={{
                   opacity: 1,
                   scale: 1,
+                  transition: { duration: 0.5 },
                 }}
               >
-                <>
+                <div>
                   <h1 className="text-md md:text-5xl font-work-sans lg:text-7xl font-bold">
                     Freedom of{" "}
                     <span className="text-[#FED703]">{slide.heading}</span>
@@ -89,8 +96,8 @@ const SecondPage = () => {
                   <h2 className="text-[0.5rem] font-wix-madefor-display md:text-md lg:text-lg">
                     {slide.subHeading}
                   </h2>
-                </>
-              </motion.div>
+                </div>
+              </MotionDiv>
             </div>
 
             <img
