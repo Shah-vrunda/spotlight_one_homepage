@@ -3,6 +3,7 @@ import "swiper/swiper-bundle.css";
 import "./swipe.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
+import { motion, HTMLMotionProps, animate } from "framer-motion";
 
 const SecondPage = () => {
   const carouselSlides = [
@@ -64,19 +65,32 @@ const SecondPage = () => {
               className="w-full h-full object-cover"
               alt={`slide.heading`}
             />
+
             <div
               data-aos={slide.animation}
               className={`absolute inset-y-0 ${slide.textContentClassName} flex items-center justify-center w-1/2 text-white p-3 md:p-4`}
             >
-              <div className="flex flex-col gap-8 lg:w-[60%]">
-                <h1 className="text-md md:text-5xl font-work-sans lg:text-7xl font-bold">
-                  Freedom of{" "}
-                  <span className="text-[#FED703]">{slide.heading}</span>
-                </h1>
-                <h2 className="text-[0.5rem] font-wix-madefor-display md:text-md lg:text-lg">
-                  {slide.subHeading}
-                </h2>
-              </div>
+              <motion.div
+                className="flex flex-col gap-8 lg:w-[60%]"
+                initial={{
+                  opacity: 0,
+                  scale: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+              >
+                <>
+                  <h1 className="text-md md:text-5xl font-work-sans lg:text-7xl font-bold">
+                    Freedom of{" "}
+                    <span className="text-[#FED703]">{slide.heading}</span>
+                  </h1>
+                  <h2 className="text-[0.5rem] font-wix-madefor-display md:text-md lg:text-lg">
+                    {slide.subHeading}
+                  </h2>
+                </>
+              </motion.div>
             </div>
 
             <img
@@ -117,3 +131,10 @@ const SecondPage = () => {
 };
 
 export default SecondPage;
+
+{
+  /* <motion.div
+  initial={{ backgroundColor: "rgb(0, 255, 0)", opacity: 0 }}
+  whileInView={{ backgroundColor: "rgb(255, 0, 0)", opacity: 1 }}
+/> */
+}
