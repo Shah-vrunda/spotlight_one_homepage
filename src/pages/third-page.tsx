@@ -14,11 +14,10 @@ const ThirdPage = () => {
           <h2
             data-aos="fade-right"
             data-aos-delay="180"
-            className="flex flex-col text-md md:text-[26px] font-normal font-wix-madefor-display"
+            className="flex flex-col text-md lg:w-[80%] w-[100%] xl:w-[70%] md:text-[26px] font-normal font-wix-madefor-display"
           >
-            <span>Spotlight One has been developed in </span>
-            <span>consultation with the country’s foremost</span>
-            <span>casting directors and studio executives. </span>
+            Spotlight One has been developed in consultation with the country’s
+            foremost casting directors and studio executives. 
           </h2>
         </div>
         <div
