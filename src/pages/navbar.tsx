@@ -1,9 +1,25 @@
 import { useEffect, useState } from "react";
+import TagManager from "react-gtm-module";
 import { Helmet } from "react-helmet";
+import { UAParser } from "ua-parser-js";
+
+enum SL1GTMEvents {
+  userVisited = "user-visited-marketing-site",
+  loginSignupButtonClicked = "login-signup-button-clicked",
+}
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarFilled, SetNavbarFilled] = useState(true);
+  const parser = new UAParser();
+  const browser = parser?.getBrowser();
+  const device = parser?.getDevice();
+  const gtmEventData = {
+    browser,
+    device,
+    timestamp: new Date().toISOString(),
+    webpage: "MARKETING",
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +45,12 @@ const Navbar = () => {
         SetNavbarFilled(true);
       }
     };
-
+    TagManager.dataLayer({
+      dataLayer: {
+        event: SL1GTMEvents.userVisited,
+        value: gtmEventData,
+      },
+    });
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -114,6 +135,14 @@ const Navbar = () => {
             About Us
           </a>
           <a
+            onClick={() => {
+              TagManager.dataLayer({
+                dataLayer: {
+                  event: SL1GTMEvents.loginSignupButtonClicked,
+                  value: gtmEventData,
+                },
+              });
+            }}
             href="https://app.spotlightone.com/signin"
             className={`${
               navbarFilled
