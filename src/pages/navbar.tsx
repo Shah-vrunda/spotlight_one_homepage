@@ -143,7 +143,7 @@ const Navbar = () => {
                 },
               });
             }}
-            href="https://app.spotlightone.com/signin"
+            href="https://app.spotlightone.com"
             className={`${
               navbarFilled
                 ? "text-[#51025e] bg-[#fffaeb] hover:animate-jump"
