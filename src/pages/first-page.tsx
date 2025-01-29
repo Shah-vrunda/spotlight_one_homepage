@@ -19,7 +19,7 @@ const FirstPage = () => {
             data-aos-duration="2000"
             className={`text-3xl md:text-4xl lg:text-[50px] font-bold font-work-sans !leading-tight`}
           >
-            One casting platform, made for India
+            Welcome to Spotlight One
           </h1>
 
           <h2
