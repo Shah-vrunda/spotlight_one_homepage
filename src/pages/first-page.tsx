@@ -13,7 +13,7 @@ const FirstPage = () => {
         />
       </Helmet>
       <div className="lg:flex justify-center lg:w-1/2 h-full">
-        <div className="flex flex-col justify-center gap-11 lg:items-start items-center p-3 mb-3 lg:p-0 lg:mb-0 ">
+        <div className="flex flex-col justify-center gap-5 lg:items-start items-center p-3 mb-3 lg:p-0 lg:mb-0 ">
           <h1
             data-aos="fade-right"
             data-aos-duration="2000"
@@ -21,7 +21,6 @@ const FirstPage = () => {
           >
             Welcome to Spotlight One
           </h1>
-
           <h2
             data-aos="fade-right"
             data-aos-delay="500"
@@ -30,10 +29,16 @@ const FirstPage = () => {
             <span>
               It has been a long time coming: the largest casting software
               company in the world meeting the largest film and entertainment
-              industry in the world. <br />
-              The home of casting, now in India
+              industry in the world.
             </span>
           </h2>
+          <span
+            data-aos="fade-right"
+            data-aos-delay="500"
+            className="text-2xl md:text-3xl lg:text-[32px] font-semibold font-work-sans !leading-tight"
+          >
+            The home of casting, now in India
+          </span>
         </div>
       </div>
       <div className="flex justify-center">
