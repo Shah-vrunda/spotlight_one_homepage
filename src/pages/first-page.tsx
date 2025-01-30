@@ -30,9 +30,9 @@ const FirstPage = () => {
             <span>
               It has been a long time coming: the largest casting software
               company in the world meeting the largest film and entertainment
-              industry in the world.
+              industry in the world. <br />
+              The home of casting, now in India
             </span>
-            <span> The home of casting, now in India.</span>
           </h2>
         </div>
       </div>
